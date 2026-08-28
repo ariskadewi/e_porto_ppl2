@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital Seminar PPG - Ariska Dewi</title>
+    /* ============================================
+   GLOBAL STYLES & COLOR PALETTE
+   ============================================ */
+
+:root {
+    /* Primary Colors - Purple Lilac Theme */
+    --primary-light: #E6D5F0;      /* Lilac Muda */
+    --primary-base: #B88FD9;       /* Ungu Lilac */
+    --primary-dark: #8B5FA8;       /* Ungu Lilac Gelap */
+    --secondary: #D84B7A;          /* Ungu Kemerahan */
+    --secondary-dark: #B83A63;     /* Ungu Kemerahan Gelap */
+    
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --light-gray: #F5F3F8;
+    --medium-gray: #D8D4E0;
+    --dark-gray: #4A4A4A;
+    --dark-text: #2D2D2D;
+    
+    /* Accent Colors */
+    --accent-success: #7CB342;
+    --accent-warning: #FFA726;
+    --accent-danger: #EF5350;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(139, 95, 168, 0.1);
+    --shadow-md: 0 4px 16px rgba(139, 95, 168, 0.15);
+    --shadow-lg: 0 8px 32px rgba(139, 95, 168, 0.2);
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--dark-text);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-base) 0%, var(--secondary) 100%);
+    color: var(--white);
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.nav-brand .subtitle {
+    font-size: 0.85rem;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid var(--white);
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F3E5FF 100%);
+    padding: var(--spacing-xxl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--primary-base) 0%, transparent 70%);
+    opacity: 0.1;
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.profile-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    font-size: 4rem;
+    color: var(--primary-base);
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-card h2 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-card .role {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-text {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+section {
+    padding: var(--spacing-xxl) 0;
+}
+
+section:nth-child(odd) {
+    background-color: var(--light-gray);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-lg);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-base), var(--secondary));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+    font-style: italic;
+}
+
+/* ============================================
+   LK1 SECTION - IDENTIFIKASI DIRI
+   ============================================ */
+
+.lk1-section {
+    background-color: var(--light-gray);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.card-item {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    padding: var(--spacing-lg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-size: 1.3rem;
+}
+
+.card-header.vision {
+    background: linear-gradient(135deg, var(--primary-base) 0%, var(--primary-dark) 100%);
+}
+
+.card-header.action {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+}
+
+.card-header.paradigm {
+    background: linear-gradient(135deg, #9B6BB8 0%, #7D4F95 100%);
+}
+
+.card-header.rtl {
+    background: linear-gradient(135deg, #B88FD9 0%, #D84B7A 100%);
+}
+
+.card-header i {
+    font-size: 2rem;
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+.card-body h4 {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   TEXTAREA STYLES (EDITABLE CONTENT)
+   ============================================ */
+
+textarea.editable-content {
+    width: 100%;
+    min-height: 150px;
+    padding: var(--spacing-md);
+    border: 2px solid var(--primary-light);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea.editable-content:focus {
+    outline: none;
+    border-color: var(--primary-base);
+    box-shadow: 0 0 0 3px rgba(184, 143, 217, 0.1);
+}
+
+textarea.editable-content::placeholder {
+    color: var(--medium-gray);
+}
+
+/* ============================================
+   FILE UPLOAD STYLES
+   ============================================ */
+
+.file-upload {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+    border: 2px dashed var(--primary-light);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+    border-color: var(--primary-base);
+    background-color: rgba(230, 213, 240, 0.5);
+}
+
+.file-upload label {
+    display: block;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+.file-upload label i {
+    margin-right: 0.5rem;
+}
+
+.file-input {
+    display: block;
+    margin: 0 auto var(--spacing-sm);
+    cursor: pointer;
+    width: 100%;
+}
+
+.file-upload small {
+    color: var(--medium-gray);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   LK2 SECTION - REFLEKSI MATA KULIAH
+   ============================================ */
+
+.lk2-section {
+    background-color: var(--white);
+}
+
+.lk2-section.alt {
+    background-color: var(--light-gray);
+}
+
+.reflection-tabs {
+    margin-top: var(--spacing-xl);
+}
+
+.tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.tab-btn {
+    padding: var(--spacing-md);
+    border: 2px solid var(--primary-light);
+    background-color: var(--white);
+    color: var(--primary-dark);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: var(--primary-base);
+    background-color: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--primary-base) 0%, var(--secondary) 100%);
+    color: var(--white);
+    border-color: transparent;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reflection-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border-left: 5px solid var(--primary-base);
+}
+
+.reflection-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.reflection-item {
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-base);
+}
+
+.reflection-item:nth-child(2) {
+    border-left-color: var(--accent-warning);
+}
+
+.reflection-item:nth-child(3) {
+    border-left-color: var(--primary-dark);
+}
+
+.reflection-item:nth-child(4) {
+    border-left-color: var(--accent-success);
+}
+
+.reflection-item h4 {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.05rem;
+}
+
+.reflection-item i {
+    color: var(--primary-base);
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   LK3 SECTION - REFLEKSI AKHIR & RTL
+   ============================================ */
+
+.lk3-section {
+    background-color: var(--light-gray);
+}
+
+.lk3-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.rtl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.rtl-item {
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(216, 75, 122, 0.1) 100%);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-base);
+    position: relative;
+    padding-left: 80px;
+}
+
+.rtl-number {
+    position: absolute;
+    left: var(--spacing-lg);
+    top: var(--spacing-lg);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-base) 0%, var(--secondary) 100%);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.rtl-item h4 {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--dark-text) 0%, #1a1a1a 100%);
+    color: var(--white);
+    padding: var(--spacing-xxl) 0 var(--spacing-lg);
+    margin-top: var(--spacing-xxl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-section h4 {
+    color: var(--primary-light);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-xxl: 2.5rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: linear-gradient(135deg, var(--primary-base) 0%, var(--secondary) 100%);
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+        list-style: none;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: var(--spacing-sm);
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .profile-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lk3-content {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rtl-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1rem;
+        --spacing-lg: 1rem;
+        --spacing-xl: 1.5rem;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-brand .subtitle {
+        font-size: 0.7rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .profile-card {
+        padding: var(--spacing-md);
+    }
+
+    .profile-image {
+        font-size: 3rem;
+    }
+
+    .card-body {
+        padding: var(--spacing-md);
+    }
+
+    .tab-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    textarea.editable-content {
+        min-height: 120px;
+        font-size: 0.9rem;
+    }
+
+    .rtl-item {
+        padding-left: 60px;
+    }
+
+    .rtl-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Portofolio PPG</h1>
+                <p class="subtitle">Perjalanan Menjadi Guru Profesional</p>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+                <li><a href="#lk1" class="nav-link">LK 1: Identifikasi Diri</a></li>
+                <li><a href="#lk2-sem1" class="nav-link">LK 2: Semester 1</a></li>
+                <li><a href="#lk2-sem2" class="nav-link">LK 2: Semester 2</a></li>
+                <li><a href="#lk3" class="nav-link">LK 3: Refleksi Akhir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- SECTION 1: BERANDA / IDENTIFIKASI DIRI (LK 1) -->
+        <section id="beranda" class="hero">
+            <div class="hero-content">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2>Ariska Dewi</h2>
+                    <p class="role">Calon Guru Profesional | Program PPG</p>
+                    <p class="intro-text">Berkomitmen untuk menciptakan pendidikan yang berkualitas dan inspiratif bagi generasi masa depan Indonesia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section LK 1: Identifikasi Diri -->
+        <section id="lk1" class="lk1-section">
+            <div class="container">
+                <h2 class="section-title">LK 1: Identifikasi Diri & Visi Pendidikan</h2>
+                
+                <div class="lk1-content">
+                    <!-- Profil & Pandangan -->
+                    <div class="card-container">
+                        <div class="card-item">
+                            <div class="card-header vision">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Profil & Pandangan Pribadi</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4>Visi Pribadi terhadap Pendidikan Indonesia</h4>
+                                <textarea class="editable-content" placeholder="Masukkan uraian visi pribadi Anda tentang pendidikan Indonesia dan peran Anda sebagai calon guru profesional...">Saya memandang pendidikan Indonesia perlu mengalami transformasi menuju pembelajaran yang lebih holistik, humanis, dan relevan dengan kebutuhan zaman. Sebagai calon guru profesional, saya berkomitmen untuk menciptakan lingkungan belajar yang inklusif, mendorong kreativitas, dan mengembangkan karakter peserta didik yang tangguh, berempati, dan siap menghadapi tantangan masa depan.</textarea>
+                                <div class="file-upload">
+                                    <label><i class="fas fa-paperclip"></i> Lampiran Artefak</label>
+                                    <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-item">
+                            <div class="card-header action">
+                                <i class="fas fa-tasks"></i>
+                                <h3>Rencana Konkret & Tindakan</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4>Langkah-Langkah Aksi Nyata</h4>
+                                <textarea class="editable-content" placeholder="Uraikan langkah-langkah aksi konkret yang akan Anda lakukan untuk mencapai visi tersebut...">1. Mengembangkan desain pembelajaran yang inovatif dan berbasis kepada peserta didik
+2. Membangun hubungan positif dan komunikasi efektif dengan semua pemangku kepentingan
+3. Terus belajar dan meningkatkan kompetensi melalui refleksi berkelanjutan
+4. Menciptakan ekosistem pembelajaran yang aman, inklusif, dan mendukung perkembangan holistik
+5. Melibatkan keluarga dan komunitas dalam perjalanan pendidikan peserta didik</textarea>
+                                <div class="file-upload">
+                                    <label><i class="fas fa-paperclip"></i> Lampiran Artefak</label>
+                                    <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section LK 2: Semester 1 -->
+        <section id="lk2-sem1" class="lk2-section">
+            <div class="container">
+                <h2 class="section-title">LK 2: Refleksi Mata Kuliah Semester 1</h2>
+                <p class="section-subtitle">Format Refleksi 4C: Connection, Challenge, Concept, Change</p>
+                
+                <div class="reflection-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="mkul-2">Pertemuan II</button>
+                        <button class="tab-btn" data-tab="mkul-3">Pertemuan III</button>
+                        <button class="tab-btn" data-tab="mkul-4">Pertemuan IV</button>
+                        <button class="tab-btn" data-tab="mkul-5">Pertemuan V</button>
+                        <button class="tab-btn" data-tab="mkul-6">Pertemuan VI</button>
+                        <button class="tab-btn" data-tab="mkul-7">Pertemuan VII</button>
+                    </div>
+
+                    <!-- Pertemuan II -->
+                    <div class="tab-content active" id="mkul-2">
+                        <div class="reflection-card">
+                            <h3>Filosofi Pendidikan dan Pendidikan Nilai</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Bagaimana materi ini terhubung dengan pengalaman dan pengetahuan sebelumnya?">Materi filosofi pendidikan menghubungkan pengalaman saya sebagai peserta didik dengan pemahaman mendalam tentang tujuan pendidikan yang sesungguhnya. Saya melihat relevansi antara nilai-nilai yang saya pegang dengan misi menciptakan perubahan sosial melalui pendidikan.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Apa tantangan yang Anda hadapi dalam memahami materi ini?">Tantangan utama adalah menyeimbangkan berbagai aliran filosofi pendidikan dan menemukan pendekatan yang paling sesuai dengan konteks Indonesia. Kesulitan juga dalam menerapkan teori filosofi ke dalam praktik pembelajaran sehari-hari yang relevan dan bermanfaat bagi peserta didik.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep atau pemahaman apa yang Anda peroleh?">Saya memahami bahwa pendidikan bukan hanya transfer pengetahuan, melainkan proses humanisasi yang membentuk karakter dan nilai-nilai. Pendidikan nilai penting untuk mengembangkan pribadi peserta didik yang utuh, etis, dan dapat berkontribusi positif kepada masyarakat.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Bagaimana pembelajaran ini akan mengubah praktik mengajar Anda?">Pembelajaran ini mengubah perspektif saya tentang peran guru. Saya akan lebih fokus pada pengembangan holistik peserta didik, tidak hanya aspek kognitif, tetapi juga afektif dan psikomotor. Saya akan mengintegrasikan nilai-nilai pendidikan dalam setiap rancangan pembelajaran.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                                <small>Upload tugas, makalah, atau dokumen pendukung lainnya</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan III -->
+                    <div class="tab-content" id="mkul-3">
+                        <div class="reflection-card">
+                            <h3>Peserta Didik dan Pemahamannya</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Pemahaman tentang peserta didik terhubung dengan pengalaman saya berinteraksi dengan berbagai karakter dan latar belakang peserta didik. Saya mulai menyadari pentingnya memahami perbedaan individu dalam proses pembelajaran.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah bagaimana mengakomodasi keragaman peserta didik dengan kemampuan, gaya belajar, dan latar belakang yang berbeda-beda. Memahami setiap individu secara mendalam memerlukan waktu dan kepekaan yang tinggi.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Konsep penting adalah bahwa setiap peserta didik memiliki potensi unik, gaya belajar yang berbeda, dan kebutuhan yang spesifik. Guru profesional harus memahami perkembangan kognitif, emosional, dan sosial peserta didik untuk merancang pembelajaran yang efektif.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan menggunakan berbagai strategi penilaian untuk memahami kebutuhan peserta didik secara mendalam. Pembelajaran saya akan lebih diferensiasi dan disesuaikan dengan karakteristik individual peserta didik.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan IV -->
+                    <div class="tab-content" id="mkul-4">
+                        <div class="reflection-card">
+                            <h3>Pembelajaran Mendalam dan Asesmen Dasar</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Materi pembelajaran mendalam terhubung dengan pengalaman saya sebagai peserta didik yang pernah mengalami pembelajaran superfisial. Saya melihat perbedaan signifikan antara pembelajaran permukaan dan pembelajaran yang mendalam.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah merancang pembelajaran yang benar-benar mendalam di tengah beban kurikulum yang padat. Asesmen juga perlu dirancang untuk mengukur pemahaman mendalam, bukan hanya pengetahuan faktual.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Pembelajaran mendalam melibatkan pemahaman konseptual, transfer pengetahuan, dan pengembangan keterampilan berpikir tingkat tinggi. Asesmen dasar dirancang untuk memberikan informasi tentang pemahaman peserta didik secara komprehensif.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan merancang pembelajaran yang mendorong pemahaman mendalam melalui pertanyaan bermakna dan investigasi. Asesmen akan lebih beragam, tidak hanya tes tetapi juga observasi, proyek, dan portofolio.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan V -->
+                    <div class="tab-content" id="mkul-5">
+                        <div class="reflection-card">
+                            <h3>Praktik Pengalaman Lapangan (PPL) Terbimbing</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">PPL terbimbing menghubungkan teori akademik dengan praktik mengajar nyata. Pengalaman ini memberikan wawasan berharga tentang dinamika kelas dan kompleksitas pembelajaran di lapangan.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan utama adalah menerapkan teori dalam situasi kelas yang dinamis dan tidak terduga. Manajemen kelas, pengelolaan waktu, dan respons terhadap perilaku peserta didik yang beragam memerlukan adaptasi cepat.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Saya belajar bahwa mengajar adalah profesi yang kompleks memerlukan keterampilan pedagogis, manajemen, dan interpersonal. Kolaborasi dengan guru pembimbing sangat penting untuk pengembangan profesional.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Pengalaman PPL memperkuat komitmen saya menjadi guru yang responsif dan adaptif. Saya akan terus melakukan refleksi untuk meningkatkan kualitas pembelajaran dan manajemen kelas.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan VI -->
+                    <div class="tab-content" id="mkul-6">
+                        <div class="reflection-card">
+                            <h3>Pola Pikir Bertumbuh (Growth Mindset)</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Konsep growth mindset terhubung dengan perjalanan personal saya dalam menghadapi tantangan akademik dan profesional. Saya mulai menyadari bagaimana mentalitas saya mempengaruhi usaha dan pencapaian.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah mengubah mindset peserta didik yang mungkin sudah terbiasa dengan fixed mindset. Membangun budaya pembelajaran yang mendorong growth mindset memerlukan konsistensi dan pemodelan oleh guru.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Growth mindset adalah keyakinan bahwa kemampuan dapat berkembang melalui usaha, pembelajaran, dan kegigihan. Guru berperan penting dalam menumbuhkan mindset ini melalui umpan balik konstruktif dan lingkungan yang mendukung.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan menerapkan growth mindset dalam pembelajaran melalui umpan balik yang spesifik, memberikan kesempatan untuk improvement, dan merayakan usaha serta proses pembelajaran. Saya juga akan memodelkan growth mindset dalam kelas.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan VII -->
+                    <div class="tab-content" id="mkul-7">
+                        <div class="reflection-card">
+                            <h3>Mata Kuliah Selektif/Elektif Semester 1</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Tuliskan koneksi materi dengan pengalaman sebelumnya...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tuliskan tantangan yang dihadapi dalam pembelajaran...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Tuliskan konsep atau pemahaman yang diperoleh...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Tuliskan bagaimana pembelajaran ini akan mengubah praktik mengajar...</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section LK 2: Semester 2 -->
+        <section id="lk2-sem2" class="lk2-section alt">
+            <div class="container">
+                <h2 class="section-title">LK 2: Refleksi Mata Kuliah Semester 2</h2>
+                <p class="section-subtitle">Format Refleksi 4C: Connection, Challenge, Concept, Change</p>
+                
+                <div class="reflection-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="mkul-8">Pertemuan VIII</button>
+                        <button class="tab-btn" data-tab="mkul-9">Pertemuan IX</button>
+                        <button class="tab-btn" data-tab="mkul-10">Pertemuan X</button>
+                        <button class="tab-btn" data-tab="mkul-11">Pertemuan XI</button>
+                        <button class="tab-btn" data-tab="mkul-12">Pertemuan XII</button>
+                    </div>
+
+                    <!-- Pertemuan VIII -->
+                    <div class="tab-content active" id="mkul-8">
+                        <div class="reflection-card">
+                            <h3>Pembelajaran Sosial Emosional</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Pembelajaran sosial emosional terhubung dengan kesadaran saya tentang pentingnya kecerdasan emosional dalam kehidupan pribadi dan profesional. Pengalaman dalam kelompok belajar menunjukkan betapa penting keterampilan sosial.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah mengintegrasikan pembelajaran sosial emosional dalam kurikulum yang sudah padat. Juga memerlukan keterampilan khusus dalam menciptakan lingkungan kelas yang aman untuk ekspresi emosi.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Pembelajaran sosial emosional meliputi pemahaman diri, pengelolaan emosi, empati, hubungan sosial, dan pengambilan keputusan yang bertanggung jawab. Ini fundamental untuk perkembangan holistik peserta didik.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan merancang pembelajaran yang mengembangkan kompetensi sosial emosional peserta didik. Kelas akan menjadi tempat yang aman untuk menggali emosi, membangun hubungan positif, dan mengembangkan kepedulian sosial.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan IX -->
+                    <div class="tab-content" id="mkul-9">
+                        <div class="reflection-card">
+                            <h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Asesmen lanjut melanjutkan pembelajaran tentang asesmen dasar dengan pendekatan yang lebih kompleks. Pengalaman di PPL memberikan konteks nyata tentang pentingnya asesmen yang komprehensif.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah mengembangkan asesmen yang valid dan reliabel untuk mengukur pembelajaran mendalam. Penafsiran data asesmen dan penggunaannya untuk perbaikan pembelajaran juga memerlukan keterampilan analitis.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Asesmen lanjut melibatkan berbagai teknik penilaian autentik, analisis data pembelajaran, dan penggunaan hasil asesmen untuk diferensiasi dan perbaikan pembelajaran berkelanjutan.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan menggunakan berbagai teknik asesmen dan menganalisis data untuk membuat keputusan pembelajaran yang tepat. Asesmen akan menjadi bagian integral dari pembelajaran, bukan hanya pengukuran di akhir.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan X -->
+                    <div class="tab-content" id="mkul-10">
+                        <div class="reflection-card">
+                            <h3>Praktik Pengalaman Lapangan (PPL) Mandiri</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">PPL mandiri merupakan kelanjutan dari PPL terbimbing dengan otonomi yang lebih besar. Pengalaman PPL terbimbing menjadi fondasi untuk kemandirian dalam mengajar.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan terletak pada pengambilan keputusan mandiri yang tepat, problem-solving yang cepat, dan tanggung jawab penuh atas pembelajaran peserta didik. Kepercayaan diri dalam mengajar menjadi kunci.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">PPL mandiri menunjukkan bahwa guru profesional harus mandiri, reflektif, dan mampu mengambil inisiatif untuk perbaikan berkelanjutan. Kolaborasi dengan rekan sejawat tetap penting untuk pengembangan bersama.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Pengalaman PPL mandiri meningkatkan kepercayaan diri saya sebagai guru. Saya siap untuk mengajar secara mandiri dengan tetap membuka diri untuk pembelajaran dan kolaborasi berkelanjutan.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan XI -->
+                    <div class="tab-content" id="mkul-11">
+                        <div class="reflection-card">
+                            <h3>Projek Kepemimpinan</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Projek kepemimpinan terhubung dengan visi pribadi saya untuk berkontribusi pada komunitas sekolah. Pengalaman dalam kelompok di PPG memberikan wawasan tentang pentingnya kepemimpinan yang visioner.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tantangan adalah mengembangkan visi kepemimpinan yang jelas, mobilisasi sumber daya, dan menggerakkan orang lain untuk berkolaborasi. Kepemimpinan juga memerlukan integritas dan kemampuan untuk menginspirasi.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Kepemimpinan guru bukan hanya tentang mengelola kelas, tetapi juga tentang menjadi agen perubahan, pembimbing, dan teladan bagi peserta didik dan komunitas. Kepemimpinan yang baik berfokus pada pertumbuhan bersama.</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Saya akan mengembangkan kepemimpinan di dalam kelas dengan memberdayakan peserta didik untuk menjadi pemimpin. Saya juga berkomitmen untuk berkontribusi pada kepemimpinan sekolah dan komunitas pendidikan.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pertemuan XII -->
+                    <div class="tab-content" id="mkul-12">
+                        <div class="reflection-card">
+                            <h3>Mata Kuliah Selektif/Elektif Semester 2</h3>
+                            <div class="reflection-grid">
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-link"></i> Connection (Koneksi)</h4>
+                                    <textarea class="editable-content" placeholder="Koneksi dengan pengalaman sebelumnya...">Tuliskan koneksi materi dengan pengalaman sebelumnya...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Challenge (Tantangan)</h4>
+                                    <textarea class="editable-content" placeholder="Tantangan yang dihadapi...">Tuliskan tantangan yang dihadapi dalam pembelajaran...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-brain"></i> Concept (Konsep)</h4>
+                                    <textarea class="editable-content" placeholder="Konsep yang dipelajari...">Tuliskan konsep atau pemahaman yang diperoleh...</textarea>
+                                </div>
+
+                                <div class="reflection-item">
+                                    <h4><i class="fas fa-sync-alt"></i> Change (Perubahan)</h4>
+                                    <textarea class="editable-content" placeholder="Perubahan dalam praktik mengajar...">Tuliskan bagaimana pembelajaran ini akan mengubah praktik mengajar...</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section LK 3: Refleksi Keseluruhan & RTL -->
+        <section id="lk3" class="lk3-section">
+            <div class="container">
+                <h2 class="section-title">LK 3: Refleksi Keseluruhan & Rencana Tindak Lanjut</h2>
+                
+                <div class="lk3-content">
+                    <!-- Perubahan Paradigma -->
+                    <div class="card-item">
+                        <div class="card-header paradigm">
+                            <i class="fas fa-brain"></i>
+                            <h3>Perubahan Paradigma Pendidikan</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4>Refleksi Komprehensif tentang Pergeseran Pandangan</h4>
+                            <p class="intro-text">Perubahan paradigma terhadap pendidikan Indonesia dan sosok guru profesional setelah menjalani perjalanan PPG:</p>
+                            <textarea class="editable-content" placeholder="Jelaskan perubahan paradigma Anda tentang pendidikan Indonesia...">Sebelum program PPG, saya memandang pendidikan sebagai proses transfer pengetahuan dari guru ke peserta didik. Namun, melalui berbagai pengalaman pembelajaran dan refleksi, saya kini memahami bahwa pendidikan adalah proses transformasi yang holistik.
+
+Perubahan paradigma utama meliputi:
+
+1. Dari Teacher-Centered ke Learner-Centered: Peserta didik adalah pusat pembelajaran, bukan guru. Guru berperan sebagai fasilitator yang membimbing peserta didik menemukan pengetahuan.
+
+2. Dari Hafalan ke Pemahaman Mendalam: Pembelajaran bukan hanya menghapal informasi, tetapi mengembangkan pemahaman konseptual yang dapat ditransfer ke konteks baru.
+
+3. Dari Penilaian Sumatif ke Formatif: Penilaian harus berkelanjutan dan digunakan untuk perbaikan pembelajaran, bukan hanya pengukuran di akhir.
+
+4. Dari Kognitif Saja ke Holistik: Pendidikan harus mengembangkan aspek kognitif, afektif, psikomotor, dan spiritual peserta didik secara seimbang.
+
+5. Dari Kompetitif ke Kolaboratif: Pembelajaran harus mendorong kerja sama dan kolaborasi, bukan kompetisi yang tidak sehat.
+
+Sebagai guru profesional, saya sekarang memahami bahwa peran guru bukan hanya mengajar, tetapi juga membimbing, menginspirasi, dan menjadi teladan. Guru harus reflektif, terus belajar, dan berkomitmen pada pengembangan diri dan peserta didik.
+
+Program PPG telah mengubah cara saya melihat pendidikan dan peran saya sebagai guru. Saya percaya bahwa dengan paradigma baru ini, saya dapat berkontribusi pada transformasi pendidikan Indonesia menuju yang lebih baik.</textarea>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rencana Tindak Lanjut (RTL) -->
+                    <div class="card-item">
+                        <div class="card-header rtl">
+                            <i class="fas fa-map"></i>
+                            <h3>Rencana Tindak Lanjut (RTL) Karir</h3>
+                        </div>
+                        <div class="card-body">
+                            <h4>Tiga Hal Utama untuk Memulai Karir & Komitmen Pengembangan Berkelanjutan</h4>
+                            <p class="intro-text">Langkah-langkah konkret yang akan dilakukan ketika memulai karir sebagai guru dan komitmen pengembangan kapasitas diri secara berkelanjutan:</p>
+                            
+                            <div class="rtl-grid">
+                                <div class="rtl-item">
+                                    <div class="rtl-number">1</div>
+                                    <h4>Membangun Pembelajaran Berkualitas Sejak Awal</h4>
+                                    <textarea class="editable-content" placeholder="Jelaskan rencana Anda...">Pada tahun pertama mengajar, saya akan fokus pada:
+- Merancang pembelajaran yang student-centered dan berbasis pada pemahaman mendalam
+- Menciptakan lingkungan kelas yang aman, inklusif, dan mendukung
+- Melakukan asesmen terdiferensiasi untuk memahami kebutuhan setiap peserta didik
+- Membangun hubungan positif dengan peserta didik, keluarga, dan rekan sejawat
+- Menggunakan refleksi berkelanjutan untuk perbaikan praktik pembelajaran
+
+Komitmen saya adalah menjadikan pembelajaran sebagai proses yang bermakna, relevan, dan memberdayakan bagi setiap peserta didik.</textarea>
+                                </div>
+
+                                <div class="rtl-item">
+                                    <div class="rtl-number">2</div>
+                                    <h4>Pengembangan Profesional Berkelanjutan</h4>
+                                    <textarea class="editable-content" placeholder="Jelaskan rencana Anda...">Saya berkomitmen untuk terus belajar dan mengembangkan diri melalui:
+- Mengikuti pelatihan dan workshop profesional yang relevan
+- Membaca literatur pendidikan terkini dan best practices
+- Berkolaborasi dengan rekan sejawat untuk saling belajar dan berbagi pengalaman
+- Menjadi anggota komunitas pembelajaran profesional untuk pengembangan berkelanjutan
+- Melakukan penelitian tindakan kelas untuk inovasi pembelajaran
+- Mengejar sertifikasi dan kompetensi tambahan sesuai kebutuhan
+
+Pengembangan berkelanjutan adalah kunci untuk tetap relevan dan efektif dalam mengajar di era yang terus berubah.</textarea>
+                                </div>
+
+                                <div class="rtl-item">
+                                    <div class="rtl-number">3</div>
+                                    <h4>Berkontribusi pada Komunitas & Sekolah</h4>
+                                    <textarea class="editable-content" placeholder="Jelaskan rencana Anda...">Saya akan aktif berkontribusi pada pengembangan sekolah dan komunitas pendidikan melalui:
+- Berpartisipasi dalam kegiatan sekolah dan program pengembangan sekolah
+- Membimbing peserta didik dalam kegiatan ekstrakurikuler dan pengembangan kepemimpinan
+- Berkolaborasi dengan orang tua dan masyarakat dalam mendukung pembelajaran peserta didik
+- Berbagi praktik baik dan inovasi dengan rekan sejawat di sekolah dan komunitas
+- Menjadi advocate untuk pendidikan yang berkualitas dan inklusif
+- Menggunakan posisi guru untuk perubahan sosial yang positif
+
+Saya percaya bahwa guru berperan penting dalam membangun masyarakat yang lebih baik melalui pendidikan.</textarea>
+                                </div>
+                            </div>
+
+                            <div class="file-upload">
+                                <label><i class="fas fa-paperclip"></i> Lampiran Artefak Pembelajaran</label>
+                                <input type="file" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Portofolio Seminar PPG</h4>
+                        <p>Dokumentasi perjalanan refleksi dan pembelajaran dalam program PPG untuk menjadi guru profesional yang berkualitas.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Kontak</h4>
+                        <p>Email: <a href="mailto:">ariska@gmail.com</a></p>
+                        <p>Dosen Pembimbing Seminar (DPS): [Nama DPS]</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Program</h4>
+                        <p>Universitas: [Universitas]</p>
+                        <p>Bidang Studi: [Bidang Studi]</p>
+                        <p>Tahun Ajaran: 2024-2026</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Portofolio Digital Seminar PPG - Ariska Dewi. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
