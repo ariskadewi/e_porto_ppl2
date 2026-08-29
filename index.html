@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Digital PPG - Guru PJOK</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons untuk Tema Olahraga & Edukasi -->
+    <title>Portofolio Digital PPG 2026 - Guru PJOK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-green: #1b4332;
-            --accent-green: #2d6a4f;
-            --light-green: #d8f3dc;
+            --primary-green: #0f382c;
+            --accent-green: #1b4332;
+            --court-wood: #d4a359;
+            --court-bg: #edd099;
             --primary-yellow: #ffb703;
             --bright-yellow: #ffc300;
             --light-yellow: #fff3bf;
-            --bg-color: #f8f9fa;
-            --text-dark: #212529;
+            --bg-color: #f4f6f8;
+            --text-dark: #1a1a1a;
             --white: #ffffff;
-            --shadow: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
 
         * {
@@ -36,53 +35,64 @@
             line-height: 1.6;
         }
 
-        /* Header / Banner Hero */
-        header {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+        /* Hero Banner Atas (Sesuai Referensi Gambar 1 & 3) */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(15,56,44,0.95) 0%, rgba(27,67,50,0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: 4rem 1rem 5rem 1rem;
+            padding: 3.5rem 1rem 4rem 1rem;
             position: relative;
             border-bottom: 8px solid var(--primary-yellow);
         }
 
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 800;
+        .hero-banner .top-badge {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-weight: 700;
             color: var(--primary-yellow);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
         }
 
-        header p {
+        .hero-banner h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 0 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-banner .sub-title {
             font-size: 1.2rem;
-            opacity: 0.9;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        .sports-badge {
+        .presenter-box {
             display: inline-block;
-            background-color: var(--primary-yellow);
-            color: var(--primary-green);
-            padding: 6px 18px;
+            background: rgba(255, 183, 3, 0.2);
+            border: 2px solid var(--primary-yellow);
+            padding: 8px 24px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            text-transform: uppercase;
+            font-size: 1rem;
+            color: var(--bright-yellow);
+            backdrop-filter: blur(5px);
         }
 
         /* Container Utama */
         .container {
             max-width: 1100px;
-            margin: -40px auto 50px;
+            margin: -30px auto 50px;
             padding: 0 20px;
             position: relative;
             z-index: 10;
         }
 
-        /* Grid Navigasi Menu (Sesuai Gambar Referensi) */
+        /* Menu Grid (Daftar Isi) */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -93,15 +103,15 @@
         .menu-card {
             background: var(--primary-green);
             color: var(--white);
-            padding: 18px;
+            padding: 18px 22px;
             border-radius: 12px;
             text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-bottom: 4px solid var(--primary-yellow);
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid var(--primary-yellow);
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
         }
@@ -112,86 +122,75 @@
             color: var(--bright-yellow);
         }
 
-        .menu-card i {
-            font-size: 1.2rem;
-            color: var(--primary-yellow);
-        }
-
-        /* Kartu Konten Utama */
+        /* Profil Section (Gambar 3 Intro Header Style) */
         .card-box {
             background: var(--white);
             border-radius: 16px;
             padding: 35px;
             margin-bottom: 35px;
             box-shadow: var(--shadow);
-            border-top: 5px solid var(--primary-yellow);
+            border-top: 6px solid var(--primary-green);
+            position: relative;
         }
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--light-green);
-            padding-bottom: 12px;
-        }
-
-        .section-header i {
-            font-size: 2rem;
-            color: var(--accent-green);
-            background: var(--light-green);
-            padding: 12px;
-            border-radius: 12px;
-        }
-
-        .section-header h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-green);
-            font-size: 1.8rem;
-        }
-
-        /* Layout Profil & Visi Misi */
         .profile-wrapper {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 30px;
-            align-items: start;
+            align-items: center;
         }
 
         .profile-card {
-            background: var(--light-green);
+            background: linear-gradient(180deg, var(--primary-green) 0%, var(--accent-green) 100%);
             border-radius: 16px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            border: 2px dashed var(--accent-green);
+            color: var(--white);
+            border: 3px solid var(--primary-yellow);
+            box-shadow: var(--shadow);
         }
 
         .profile-img {
-            width: 100%;
-            height: 320px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 4px solid var(--primary-yellow);
+        }
+
+        .greetings-card {
+            background: var(--primary-green);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 8px solid var(--primary-yellow);
+        }
+
+        .greetings-card h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-yellow);
             margin-bottom: 15px;
-            border: 4px solid var(--white);
+            font-size: 1.8rem;
         }
 
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 15px;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .social-btn {
-            background: var(--primary-green);
+            background: rgba(255,255,255,0.15);
             color: var(--white);
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            gap: 6px;
             transition: 0.3s;
         }
 
@@ -200,46 +199,33 @@
             color: var(--primary-green);
         }
 
-        .visi-misi-content h3 {
-            color: var(--primary-green);
-            margin-top: 15px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+        /* Section Header */
+        .section-header {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 12px;
         }
 
-        .visi-box {
-            background: var(--light-yellow);
-            padding: 15px 20px;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-yellow);
-            margin-bottom: 15px;
+        .section-header i {
+            font-size: 1.8rem;
+            color: var(--primary-green);
         }
 
-        /* List Styling */
-        ul.custom-list {
-            list-style: none;
-            padding-left: 0;
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-green);
+            font-size: 1.8rem;
         }
 
-        ul.custom-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
+        /* 11 Matkul & Volley Background Theme */
+        .volleyball-theme-bg {
+            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+                        url('https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=1000&q=80') center/cover;
         }
 
-        ul.custom-list li::before {
-            content: "\f00c";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--accent-green);
-        }
-
-        /* Tab / Accordion untuk 11 Mata Kuliah */
         .course-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -248,14 +234,13 @@
         }
 
         .tab-btn {
-            background: var(--light-green);
+            background: #e8f5e9;
             color: var(--primary-green);
-            border: none;
+            border: 1px solid var(--accent-green);
             padding: 10px 18px;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
             transition: 0.3s;
             display: flex;
             align-items: center;
@@ -272,75 +257,160 @@
             animation: fadeIn 0.4s ease-in-out;
         }
 
-        .course-panel.active {
-            display: block;
-        }
+        .course-panel.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Layout Detail Refleksi Matkul (A. Konteks, B. Tantangan, dst.) */
         .reflection-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
             margin-bottom: 25px;
         }
 
         .ref-box {
-            background: #fdfdfd;
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            border-radius: 12px;
-            border-top: 4px solid var(--accent-green);
+            background: var(--white);
+            border-left: 5px solid var(--primary-green);
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .ref-box h4 {
             color: var(--primary-green);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        /* Box Artefak Pembelajaran */
+        /* Box Artefak & Sub-Halaman CTA Button */
         .artefact-container {
-            background: var(--light-yellow);
-            border: 2px dashed var(--primary-yellow);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 14px;
+            border: 2px solid var(--primary-yellow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artefact-container::after {
+            content: "\f45f";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: -10px;
+            bottom: -20px;
+            font-size: 8rem;
+            opacity: 0.1;
+            color: var(--white);
         }
 
         .artefact-container h4 {
-            color: var(--primary-green);
+            color: var(--primary-yellow);
+            font-size: 1.4rem;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .artefact-pills {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
-            margin-top: 10px;
+            margin: 15px 0 25px;
         }
 
         .pill {
-            background: var(--white);
-            color: var(--primary-green);
-            padding: 8px 15px;
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-view-artifact {
+            display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 10px;
+            background: var(--primary-yellow);
+            color: var(--primary-green);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255,183,3,0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-view-artifact:hover {
+            background: var(--bright-yellow);
+            transform: scale(1.05);
+        }
+
+        /* Modal Sub-Halaman Penjelasan Artefak */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--white);
+            width: 100%;
+            max-width: 800px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+            box-shadow: var(--shadow);
+            border-top: 8px solid var(--primary-green);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-modal:hover { color: var(--text-dark); }
+
+        .modal-body h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--light-yellow);
+            padding-bottom: 8px;
+        }
+
+        .artifact-detail-item {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-yellow);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .artifact-detail-item h5 {
+            color: var(--primary-green);
+            font-size: 1.05rem;
+            margin-bottom: 5px;
         }
 
         footer {
@@ -348,511 +418,197 @@
             color: var(--white);
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
             border-top: 6px solid var(--primary-yellow);
         }
 
-        /* Responsive Breakpoints */
         @media (max-width: 850px) {
             .profile-wrapper { grid-template-columns: 1fr; }
-            .profile-img { height: 260px; }
-            header h1 { font-size: 2rem; }
+            .hero-banner h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Banner Hero -->
-    <header>
-        <h1>PORTOFOLIO DIGITAL PPG</h1>
-        <p>Pendidikan Profesi Guru Jasmani, Olahraga, dan Kesehatan (PJOK)</p>
-        <span class="sports-badge"><i class="fa-solid fa-medal"></i> Calon Guru Profesional</span>
+    <header class="hero-banner">
+        <div class="top-badge"><i class="fa-solid fa-volleyball"></i> PORTOFOLIO PPG PRAJABATAN 2026</div>
+        <h1>GURU PJOK MASA DEPAN</h1>
+        <div class="sub-title">Pendidikan Jasmani, Olahraga, dan Kesehatan</div>
+        <div class="presenter-box">
+            PRESENTED BY: (GURU NAME, S.Pd.)
+        </div>
     </header>
 
     <div class="container">
 
-        <!-- Navigasi Menu Grid (Daftar Isi) -->
         <div class="menu-grid">
-            <a href="#profil" class="menu-card">Profil Guru <i class="fa-solid fa-user-gear"></i></a>
-            <a href="#visi-misi" class="menu-card">Visi & Misi <i class="fa-solid fa-bullseye"></i></a>
-            <a href="#refleksi-ppg" class="menu-card">Refleksi PPG <i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="#refleksi-matkul" class="menu-card">11 Mata Kuliah <i class="fa-solid fa-book-bookmark"></i></a>
+            <a href="#profil" class="menu-card">Profil Guru <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#visi-misi" class="menu-card"><i class="fa-solid fa-volleyball"></i> Visi & Misi <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#refleksi-ppg" class="menu-card">Refleksi PPG <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="#refleksi-matkul" class="menu-card">11 Mata Kuliah <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
 
-        <!-- Section 1: Profil Guru Olahraga -->
         <section id="profil" class="card-box">
-            <div class="section-header">
-                <i class="fa-solid fa-id-card-clip"></i>
-                <h2>Profil Calon Guru PJOK</h2>
-            </div>
             <div class="profile-wrapper">
                 <div class="profile-card">
-                    <!-- Foto Profil Guru Olahraga -->
-                    <img src="Fenisia Megapuspasari (2664817002).JPG.jpeg" alt="Foto Profil Guru PJOK" class="profile-img">
-                    <h3>Guru PJOK Masa Depan</h3>
-                    <p style="font-size: 0.9rem; color: #555;">Spesialis Pendidikan Jasmani, Olahraga & Kesehatan</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="#" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Foto Profil Guru PJOK" class="profile-img">
+                    <h3>Guru PJOK Professional</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Spesialis Pendidikan Jasmani & Olahraga</p>
                 </div>
-                <div class="visi-misi-content">
-                    <p>
-                        Salam olahraga! Saya adalah Mahasiswa Pendidikan Profesi Guru (PPG) Prajabatan bidang studi Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK). Berkomitmen penuh untuk menghadirkan pembelajaran gerak yang ramah, aman, inklusif, serta berbasis pada pengembangan karakter holistik siswa.
-                    </p>
+                
+                <div class="greetings-card">
+                    <h2>Greetings! I'm (Nama Guru)</h2>
+                    <p>Halo, saya calon Guru Profesional Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK). Saya memiliki komitmen kuat untuk menghadirkan pembelajaran jasmani yang inklusif, aktif, aman, serta berbasis pada karakter sportivitas siswa.</p>
                     <br>
-                    <p>
-                        Melalui pendekatan <em>deep learning</em> dan pengintegrasian nilai-nilai kearifan lokal <strong>Tri Hita Karana</strong>, saya beraspirasi menjadi pendidik yang tidak hanya mengajar ketangkasan fisik, tetapi juga membangun kecerdasan sosial, spiritual, dan emosional peserta didik.
-                    </p>
+                    <p>Melalui pendekatan <em>deep learning</em> dan nilai <strong>Tri Hita Karana</strong>, saya beraspirasi membangun kebugaran dan kesehatan peserta didik secara holistik.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="#" class="social-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Visi & Misi (Sesuai Dokumen LK 1) -->
         <section id="visi-misi" class="card-box">
             <div class="section-header">
-                <i class="fa-solid fa-compass-drafting"></i>
+                <i class="fa-solid fa-bullseye"></i>
                 <h2>Visi & Misi Pendidikan</h2>
             </div>
-
-            <div class="visi-box">
-                <h3><i class="fa-solid fa-flag"></i> Visi Pendidikan di Indonesia</h3>
-                <p>Mewujudkan pendidikan yang inklusif, bermakna, dan berkeadilan, yang memberikan kesempatan kepada setiap peserta didik untuk berkembang sesuai dengan potensi dan karakteristiknya[cite: 2]. Pendidikan tidak hanya berfokus pada pencapaian akademik, tetapi juga membentuk peserta didik yang berkarakter Pancasila, sehat, mandiri, mampu berpikir kritis dan kreatif, serta memiliki kepedulian terhadap sesama dan lingkungan[cite: 2].</p>
-            </div>
-
-            <div class="visi-box" style="background-color: var(--light-green); border-left-color: var(--accent-green);">
-                <h3><i class="fa-solid fa-user-ninja"></i> Visi Pribadi sebagai Calon Guru PJOK</h3>
-                <p>Mewujudkan pembelajar sepanjang hayat yang unggul, berkarakter Pancasila, dan berpemikiran mendalam (<em>deep learning</em>) melalui keharmonisan spiritual, sosial, dan lingkungan yang berlandaskan falsafah <strong>Tri Hita Karana</strong>[cite: 2]. Sebagai guru PJOK, saya ingin menjadi pendidik profesional, teladan, serta mampu menciptakan pembelajaran aktif, menyenangkan, aman, inklusif, dan bermakna[cite: 2].</p>
-            </div>
-
-            <h3 style="margin-top: 20px;"><i class="fa-solid fa-list-check"></i> Strategi Pencapaian Visi (Misi Pembelajaran)</h3>
-            <ul class="custom-list" style="margin-top: 10px;">
-                <li>Meningkatkan kompetensi pedagogik, profesional, sosial, dan kepribadian secara berkelanjutan melalui PPG[cite: 2].</li>
-                <li>Menyesuaikan kegiatan PJOK dengan kebutuhan, kemampuan, dan karakteristik fisik peserta didik agar setiap anak memperoleh kesempatan berkembang secara optimal[cite: 2].</li>
-                <li>Menerapkan pembelajaran aktif, kontekstual, kolaboratif, reflektif, serta mendorong keterampilan berpikir kritis dan kreatif[cite: 2].</li>
-                <li>Internalisasi nilai Pancasila dan Tri Hita Karana melalui pembiasaan sportivitas, disiplin, tanggung jawab, gotong royong, dan pola hidup sehat[cite: 2].</li>
-                <li>Pemanfaatan teknologi tepat guna, refleksi berkala, serta berkontribusi aktif dalam kegiatan olahraga dan masyarakat[cite: 2].</li>
-            </ul>
+            <p><strong>Visi Pribadi:</strong> Mewujudkan pembelajar sepanjang hayat yang unggul, berkarakter Pancasila, dan berpemikiran mendalam melalui keharmonisan gerak berlandaskan falsafah Tri Hita Karana.</p>
         </section>
 
-        <!-- Section 3: Refleksi Umum Perkuliahan PPG -->
-        <section id="refleksi-ppg" class="card-box">
+        <section id="refleksi-matkul" class="card-box volleyball-theme-bg">
             <div class="section-header">
-                <i class="fa-solid fa-person-running"></i>
-                <h2>Refleksi Perkuliahan PPG PJOK</h2>
+                <i class="fa-solid fa-volleyball"></i>
+                <h2>11 Mata Kuliah & Artefak Pembelajaran</h2>
             </div>
-            <p>
-                Selama mengikuti program Perkuliahan PPG PJOK, saya mengalami transformasi paradigma yang signifikan mengenai esensi pendidikan jasmani[cite: 1]. Pendidikan jasmani bukan sekadar penguasaan keterampilan cabang olahraga secara mekanis atau pemenuhan nilai akhir (<em>summative assessment</em>), melainkan sebuah wahana untuk membangun kesadaran gerak, kesehatan sepanjang hayat, serta karakter Pancasila[cite: 1].
-            </p>
-            <br>
-            <p>
-                Melalui pengintegrasian asesmen diagnostik dan diferensiasi pembelajaran, saya belajar merancang aktivitas fisik yang dapat diakses oleh semua siswa—baik siswa dengan kemampuan gerak awal rendah maupun tinggi[cite: 1]. Pendekatan ini meletakkan prinsip keadilan dan inklusivitas sebagai prioritas utama dalam ruang belajar PJOK[cite: 1].
-            </p>
-        </section>
 
-        <!-- Section 4: Refleksi 11 Mata Kuliah (Sesuai Dokumen LK 2) -->
-        <section id="refleksi-matkul" class="card-box">
-            <div class="section-header">
-                <i class="fa-solid fa-layer-group"></i>
-                <h2>Refleksi Pengalaman Belajar (11 Mata Kuliah)</h2>
-            </div>
-            <p style="margin-bottom: 20px;">Pilih mata kuliah di bawah untuk membaca refleksi lengkap, analisis pengalaman belajar, dan artefak pendukungnya:</p>
-
-            <!-- Tab Buttons untuk 11 Mata Kuliah -->
             <div class="course-tabs">
-                <button class="tab-btn active" onclick="openCourse(event, 'mk1')"><i class="fa-solid fa-dumbbell"></i> 1. PPL 1</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk2')"><i class="fa-solid fa-brain"></i> 2. Pemahaman Peserta Didik</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk3')"><i class="fa-solid fa-clipboard-check"></i> 3. Prinsip Pengajaran & Asesmen I</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk4')"><i class="fa-solid fa-landmark"></i> 4. Filosofi Pendidikan</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk5')"><i class="fa-solid fa-heart-pulse"></i> 5. Pembelajaran Sosial Emosional</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk6')"><i class="fa-solid fa-laptop-code"></i> 6. Computational Thinking</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk7')"><i class="fa-solid fa-person-chalkboard"></i> 7. PPL 2</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk8')"><i class="fa-solid fa-sliders"></i> 8. Prinsip Pengajaran & Asesmen II</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk9')"><i class="fa-solid fa-people-roof"></i> 9. Proyek Kepemimpinan</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk10')"><i class="fa-solid fa-award"></i> 10. Seminar PPG</button>
-                <button class="tab-btn" onclick="openCourse(event, 'mk11')"><i class="fa-solid fa-wheelchair"></i> 11. Pendidikan Inklusif PJOK</button>
+                <button class="tab-btn active" onclick="openCourse(event, 'mk1')"><i class="fa-solid fa-volleyball"></i> MK 1: PPL 1</button>
+                <button class="tab-btn" onclick="openCourse(event, 'mk2')"><i class="fa-solid fa-brain"></i> MK 2: Pemahaman Peserta Didik</button>
+                <button class="tab-btn" onclick="openCourse(event, 'mk3')"><i class="fa-solid fa-clipboard-check"></i> MK 3: Prinsip Pengajaran I</button>
+                <button class="tab-btn" onclick="openCourse(event, 'mk4')"><i class="fa-solid fa-landmark"></i> MK 4: Filosofi Pendidikan</button>
             </div>
 
-            <!-- ISI PANELS UNTUK SETIAP MATKUL -->
-
-            <!-- MK 1: PPL 1 (Lengkap dari LK 2 PDF) -->
             <div id="mk1" class="course-panel active">
-                <h3><i class="fa-solid fa-dumbbell"></i> Mata Kuliah 1: Praktik Pengalaman Lapangan (PPL) 1</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
+                <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-whistle"></i> PPL 1: Analisis Rencana & Asesmen Pembelajaran PJOK</h3>
                 
                 <div class="reflection-grid">
                     <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> 1. Connection (Keterkaitan Materi)</h4>
-                        <p>Materi pada PPL 1 berkaitan erat dengan penyiapan kompetensi pedagogik, profesional, sosial, dan kepribadian pendidik PJOK[cite: 1]. Memfasilitasi penerjemahan visi dalam menghadirkan ruang belajar jasmani yang inklusif, aman, dan menyelaraskan dimensi Tri Hita Karana (spiritual, sosial, lingkungan)[cite: 1].</p>
+                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
+                        <p>Materi PPL 1 berkaitan erat dengan penyiapan kompetensi pedagogik dan profesional guru PJOK di lapangan.</p>
                     </div>
                     <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> 2. Challenge (Pergeseran Paradigma)</h4>
-                        <p>Pergeseran dari pembelajaran olahraga berbasis instruksi mekanis menuju pendekatan <em>deep learning</em> dan <em>Backward Design</em>[cite: 1]. Sebelumnya berfokus pada keterampilan teknis & penilaian sumatif semata[cite: 1]. Kini berfokus pada asesmen diagnostik dan diferensiasi gerak[cite: 1].</p>
+                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
+                        <p>Pergeseran dari pengajaran mekanis menuju pendekatan <em>deep learning</em> dan asesmen berdiferensiasi gerak.</p>
                     </div>
                     <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> 3. Concept (Konsep Utama)</h4>
-                        <p>Pemetaan karakteristik siswa secara holistik, perancangan pembelajaran PJOK berdiferensiasi, serta penanaman Profil Pelajar Pancasila melalui olahraga (berpikir kritis, kemandirian, dan gotong royong)[cite: 1].</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> 4. Change (Rencana Perubahan)</h4>
-                        <p>Melakukan transformasi kontekstual dalam praktik pengajaran PJOK: memformulasikan modul berpusat pada siswa, menjamin aksesibilitas semua murid, serta evaluasi diri rutin berbasis data hasil belajar[cite: 1].</p>
+                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
+                        <p>Pemetaan kesiapan fisik siswa dan integrasi Profil Pelajar Pancasila dalam permainanan bola voli/olahraga beregu.</p>
                     </div>
                 </div>
 
                 <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran Terpilih (Bukti Dukung)</h4>
-                    <p>Artefak yang dipilih merepresentasikan rekam jejak perkembangan proses berpikir dan keterampilan profesional secara konkret dari perencanaan hingga evaluasi lapangan[cite: 1]:</p>
+                    <i class="fa-solid fa-award" style="font-size: 2.5rem; color: var(--primary-yellow); margin-bottom: 10px;"></i>
+                    <h4>ARTEFAK PEMBELAJARAN TERPILIH (Bukti Dukung)</h4>
+                    <p style="font-size: 0.9rem; max-width: 600px; margin: 0 auto;">Artefak ini merepresentasikan rekam jejak perkembangan proses berpikir dan keterampilan profesional dari perencanaan hingga pelaksanaan di lapangan.</p>
+                    
                     <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-file-lines"></i> Modul Ajar PJOK Berdiferensiasi[cite: 1]</span>
-                        <span class="pill"><i class="fa-solid fa-square-check"></i> Instrumen Asesmen Awal (Diagnostik)[cite: 1]</span>
-                        <span class="pill"><i class="fa-solid fa-list-check"></i> Rubrik Penilaian Unjuk Kerja[cite: 1]</span>
-                        <span class="pill"><i class="fa-solid fa-book"></i> Refleksi Jurnal Harian[cite: 1]</span>
-                        <span class="pill"><i class="fa-solid fa-video"></i> Video Praktik Pembelajaran Terbimbing[cite: 1]</span>
+                        <span class="pill"><i class="fa-solid fa-file-pdf"></i> Modul Ajar PJOK</span>
+                        <span class="pill"><i class="fa-solid fa-square-check"></i> Instrumen Asesmen Awal</span>
+                        <span class="pill"><i class="fa-solid fa-list-check"></i> Rubrik Penilaian Voli</span>
                     </div>
+
+                    <button class="btn-view-artifact" onclick="openModal()">
+                        VIEW FULL ARTIFACT EXPLANATION & SUB-PAGE &gt;&gt;
+                    </button>
                 </div>
             </div>
 
-            <!-- MK 2: Pemahaman Peserta Didik -->
             <div id="mk2" class="course-panel">
-                <h3><i class="fa-solid fa-brain"></i> Mata Kuliah 2: Pemahaman tentang Peserta Didik dan Pembelajarannya</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Memahami tahapan perkembangan fisik, kognitif, dan sosio-emosional anak sangat krusial dalam menyusun aktivitas motorik yang aman dan tepat guna sesuai taraf usianya.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Menghadapi variasi kesiapan fisik dan motivasi bergerak murid yang sangat beragam di satu kelas tanpa menimbulkan rasa minder pada anak yang belum terampil.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Teori Perkembangan Kognitif Piaget, Developmentally Appropriate Practice (DAP) dalam PJOK, dan Zona Perkembangan Proksimal (ZPD).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Selalu melakukan asesmen pemetaan gaya belajar dan tingkat kesiapan fisik sebelum menyusun materi permainan atau olahraga beregu.</p>
-                    </div>
-                </div>
-
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-chart-pie"></i> Lembar Pemetaan Profil Peserta Didik</span>
-                        <span class="pill"><i class="fa-solid fa-file-contract"></i> Laporan Case Study Kesiapan Fisik Siswa</span>
-                    </div>
-                </div>
+                <h3>MK 2: Pemahaman tentang Peserta Didik dan Pembelajarannya</h3>
+                <p>Penjelasan materi dan refleksi untuk mata kuliah 2...</p>
             </div>
-
-            <!-- MK 3: Prinsip Pengajaran & Asesmen I -->
             <div id="mk3" class="course-panel">
-                <h3><i class="fa-solid fa-clipboard-check"></i> Mata Kuliah 3: Prinsip Pengajaran dan Asesmen I</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Memandu penyusunan perencanaan pembelajaran berbasis *Understanding by Design* (UbD) yang berpatokan pada tujuan akhir pemahaman jasmani siswa.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Mengubah pola asesmen tradisional yang fokus pada angka kecepatan/kekuatan menjadi penilaian proses, sikap sportivitas, dan pertumbuhan diri.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Backward Design, Asesmen Formatif Berkelanjutan, dan Pembelajaran Berdiferensiasi (Konten, Proses, Produk Gerak).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Merancang modul ajar dengan tujuan yang jelas dan instrumen asesmen diagnostik di awal materi olahraga.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-file-code"></i> Rancangan Modul UbD PJOK</span>
-                        <span class="pill"><i class="fa-solid fa-chart-column"></i> Rubrik Penilaian Afektif & Keterampilan</span>
-                    </div>
-                </div>
+                <h3>MK 3: Prinsip Pengajaran dan Asesmen I</h3>
+                <p>Penjelasan materi dan refleksi untuk mata kuliah 3...</p>
             </div>
-
-            <!-- MK 4: Filosofi Pendidikan -->
             <div id="mk4" class="course-panel">
-                <h3><i class="fa-solid fa-landmark"></i> Mata Kuliah 4: Filosofi Pendidikan Nasional</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Pemikiran Ki Hajar Dewantara mengenai "Menuntun" kodrat anak melandasi bahwa pembelajaran olahraga harus memerdekakan dan menyenangkan.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Mengikis anggapan bahwa pelajaran PJOK hanya pengisi waktu luang atau sekadar kegiatan militeristik/instruksional yang mengekang siswa.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Sistem Among, Kodrat Alam & Zaman, Pendidikan Inklusif, dan Kodrat Anak adalah Bermain (Olahraga Berbasis Permainan).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Mendesain aktivitas aktivitas jasmani berbasis permainan tradisional yang memperkuat gotong royong dan kegembiraan bergerak.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-newspaper"></i> Jurnal Aksi Nyata Filosfi KHD dalam PJOK</span>
-                        <span class="pill"><i class="fa-solid fa-photo-film"></i> Infografis Pembelajaran Jasmani Merdeka</span>
-                    </div>
-                </div>
+                <h3>MK 4: Filosofi Pendidikan Nasional</h3>
+                <p>Penjelasan materi dan refleksi untuk mata kuliah 4...</p>
             </div>
-
-            <!-- MK 5: PSE -->
-            <div id="mk5" class="course-panel">
-                <h3><i class="fa-solid fa-heart-pulse"></i> Mata Kuliah 5: Pembelajaran Sosial Emosional (PSE)</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Olahraga adalah arena terbaik untuk melatih regulasi emosi, kekalahan, kemenangan, kerja sama tim, dan kepemimpinan secara langsung.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Mengelola ketegangan, rasa frustrasi siswa saat kalah bertanding, atau sifat agresif berlebihan dalam permainan olahraga lapangan.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>5 Kompetensi CASELS (Self-awareness, Self-management, Social Awareness, Relationship Skills, Responsible Decision-Making).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Mengintegrasikan teknik STOP dan refleksi emosional sebelum dan sesudah aktivitas olahraga bertensi tinggi.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-heart"></i> Lembar Refleksi Emosi Siswa Pasca-Tanding</span>
-                        <span class="pill"><i class="fa-solid fa-book-open"></i> Modul Integrasi KSE dalam Lapangan Olahraga</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 6: Computational Thinking -->
-            <div id="mk6" class="course-panel">
-                <h3><i class="fa-solid fa-laptop-code"></i> Mata Kuliah 6: Computational Thinking dalam Pendidikan</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>CT membantu guru dan siswa memecahkan pola gerakan kompleks (seperti strategi bertanding atau analisis pola teknik renang/senam) menjadi tahapan sistematis.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Menghubungkan pemikiran komputasi yang terkesan digital/komputer ke dalam dunia aktivitas gerak dan lapangan fisik.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>4 Fondasi CT: Dekomposisi gerakan, Pengenalan Pola taktik, Abstraksi aturan, dan Algoritma langkah latihan.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Melatih siswa menganalisis kegagalan teknik gerak secara mandiri menggunakan tahapan dekomposisi CT.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-diagram-project"></i> Lembar Kerja Analisis Taktik Permainan Beregu Berbasis CT</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 7: PPL 2 -->
-            <div id="mk7" class="course-panel">
-                <h3><i class="fa-solid fa-person-chalkboard"></i> Mata Kuliah 7: Praktik Pengalaman Lapangan (PPL) 2</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Pemantapan kemandirian mengajar mandiri dan melaksanakan Penelitian Tindakan Kelas (PTK) untuk menyelesaikan masalah gerak siswa.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Melakukan evaluasi berkelanjutan terhadap efektivitas metode pembelajaran yang diterapkan di kelas inklusif.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Praktik Mengajar Mandiri, Penelitian Tindakan Kelas (PTK kolaboratif), dan Evaluasi Program Pembelajaran PJOK.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Menggunakan data observasi PTK untuk terus memperbaiki strategi pengajaran di lapangan secara reflektif.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-scroll"></i> Laporan Penelitian Tindakan Kelas (PTK PJOK)</span>
-                        <span class="pill"><i class="fa-solid fa-video"></i> Video Praktik Mengajar Mandiri</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 8: Prinsip Pengajaran & Asesmen II -->
-            <div id="mk8" class="course-panel">
-                <h3><i class="fa-solid fa-sliders"></i> Mata Kuliah 8: Prinsip Pengajaran dan Asesmen II</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Pendalaman menyusun pembelajaran yang responsive terhadap culturally responsive teaching (CRT) dan karakteristik zona potensi sekolah.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Mengadaptasi kurikulum nasional dengan keterbatasan fasilitas alat olahraga di sekolah tempat PPL.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Modifikasi Alat dan Sarana PJOK, Assessment of/for/as learning, dan Culturally Responsive Teaching (CRT).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Membuat media pembelajaran modifikasi dari bahan bekas yang aman untuk menunjang aktivitas fisik seluruh murid.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-cubes"></i> Rancangan Modifikasi Alat Olahraga Inovatif</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 9: Proyek Kepemimpinan -->
-            <div id="mk9" class="course-panel">
-                <h3><i class="fa-solid fa-people-roof"></i> Mata Kuliah 9: Proyek Kepemimpinan</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Mengasah jiwa kepemimpinan guru dalam menginisiasi kegiatan kebugaran masyarakat atau kampanye pola hidup sehat di lingkungan sekitar.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Mengoordinasikan tim, mengelola anggaran, serta menjalin kemitraan dengan stakeholder di luar sekolah.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Service Learning, Management Project, Community Engagement, dan Health-Related Fitness Campaign.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Aktif menjadi penggerak kegiatan jalan sehat, kebugaran, dan edukasi gizi seimbang di komunitas sekolah.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-handshake"></i> Proposal & Laporan Proyek Kampanye Healthy Lifestyle</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 10: Seminar PPG -->
-            <div id="mk10" class="course-panel">
-                <h3><i class="fa-solid fa-award"></i> Mata Kuliah 10: Seminar Pendidikan Profesi Guru</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Wadah untuk merefleksikan seluruh pengalaman belajar, merancang portofolio digital bermakna, dan mempertahankan karya reflektif di depan penguji.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Sintesis seluruh artefak dan cerita perubahan diri menjadi narasi reflektif yang kuat dan berbasis bukti konkret.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Desain Portofolio Digital, Refleksi Kritis Berkelanjutan, dan Continuous Professional Development (CPD).</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Berkomitmen menjadi pembelajar sepanjang hayat dengan terus mendokumentasikan praktik baik pembelajaran.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-globe"></i> Web Portofolio Digital PPG PJOK</span>
-                        <span class="pill"><i class="fa-solid fa-file-powerpoint"></i> Slide Presentasi Seminar Karya Reflektif</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MK 11: Pendidikan Inklusif dalam PJOK -->
-            <div id="mk11" class="course-panel">
-                <h3><i class="fa-solid fa-wheelchair"></i> Mata Kuliah 11: Pendidikan Inklusif & Adaptif dalam PJOK</h3>
-                <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                <div class="reflection-grid">
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-link"></i> Connection</h4>
-                        <p>Pendidikan Jasmani Adaptif (PJA) menjamin peserta didik berkebutuhan khusus (PDBK) mendapatkan hak yang sama untuk berolahraga aman dan bahagia.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-bolt"></i> Challenge</h4>
-                        <p>Merancang aktivitas fisik bersama antara siswa reguler dan PDBK tanpa membedakan secara diskriminatif.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-lightbulb"></i> Concept</h4>
-                        <p>Model Modifikasi Gerak (TREE: Teaching style, Rules, Environment, Equipment), dan Aksesibilitas Fasilitas Olahraga.</p>
-                    </div>
-                    <div class="ref-box">
-                        <h4><i class="fa-solid fa-arrows-rotate"></i> Change</h4>
-                        <p>Menyiapkan selalu skenario pendampingan dan aturan permainan yang fleksibel untuk merangkul semua keberagaman murid.</p>
-                    </div>
-                </div>
-                <div class="artefact-container">
-                    <h4><i class="fa-solid fa-folder-open"></i> Artefak Pembelajaran</h4>
-                    <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-universal-access"></i> Modul Pembelajaran Olahraga Adaptif PJOK</span>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
     </div>
 
-    <!-- Footer -->
+    <div class="modal-overlay" id="artifactModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <h3><i class="fa-solid fa-folder-open"></i> Sub-Halaman: Penjelasan Artefak Pembelajaran PJOK</h3>
+                <p style="margin-bottom: 20px; font-size: 0.95rem;">Berikut adalah rincian artefak pendukung pembelajaran yang disusun selama perkuliahan PPG Prajabatan PJOK:</p>
+                
+                <div class="artifact-detail-item">
+                    <h5>1. Modul Ajar PJOK (Materi Permainan Bola Besar / Bola Voli)</h5>
+                    <p>Modul ajar dirancang menggunakan prinsip *Understanding by Design* (UbD) dan diferensiasi gerak, memfasilitasi siswa dengan berbagai tingkat kebugaran fisik.</p>
+                </div>
+
+                <div class="artifact-detail-item">
+                    <h5>2. Instrumen Asesmen Diagnostik Keterampilan Motorik</h5>
+                    <p>Instrumen penilaiaan awal untuk mengukur kemampuan dasar passing atas, passing bawah, dan koordinasi fisik peserta didik sebelum materi inti dimulai.</p>
+                </div>
+
+                <div class="artifact-detail-item">
+                    <h5>3. Rubrik Penilaian Unjuk Kerja & Afektif (Sportivitas)</h5>
+                    <p>Rubrik holistik yang menilai tidak hanya keterampilan teknik olahraga, tetapi juga nilai-nilai gotong royong, kejujuran, dan kesadaran emosional (PSE).</p>
+                </div>
+
+                <div class="artifact-detail-item">
+                    <h5>4. Video Jurnal Praktik Pembelajaran Terbimbing</h5>
+                    <p>Dokumentasi pelaksanaan pembelajaran fisik di lapangan yang menunjukkan adaptasi pengajaran dan interaksi positif guru-siswa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Portofolio PPG Prajabatan PJOK. Dibuat dengan dedikasi tinggi untuk kemajuan Pendidikan Jasmani di Indonesia.</p>
+        <p>&copy; 2026 Portofolio PPG Prajabatan PJOK. Designed for Physical Education & Sports Excellence.</p>
     </footer>
 
-    <!-- JavaScript untuk Tab Switcher (11 Mata Kuliah) -->
     <script>
+        // Tab Switcher untuk 11 Mata Kuliah
         function openCourse(evt, courseId) {
             var i, coursePanel, tabBtn;
-            
-            // Sembunyikan semua panel matkul
             coursePanel = document.getElementsByClassName("course-panel");
             for (i = 0; i < coursePanel.length; i++) {
                 coursePanel[i].classList.remove("active");
             }
-
-            // Hapus status active dari semua tombol tab
             tabBtn = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tabBtn.length; i++) {
                 tabBtn[i].classList.remove("active");
             }
-
-            // Tampilkan panel matkul yang dipilih dan tambah class active ke tombol yang diklik
             document.getElementById(courseId).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
-    </script>
 
+        // Modal Sub-Halaman Artefak
+        function openModal() {
+            document.getElementById("artifactModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("artifactModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById("artifactModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
