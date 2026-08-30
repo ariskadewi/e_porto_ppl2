@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Digital PPG 2026 - Guru PJOK</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -401,28 +399,6 @@
             transform: scale(1.03);
         }
 
-        .btn-download-artifact {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #ffffff;
-            color: var(--primary-green);
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.9rem;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 2px solid var(--primary-yellow);
-        }
-
-        .btn-download-artifact:hover {
-            background: var(--light-yellow);
-            transform: scale(1.03);
-        }
-
         /* Modal Sub-Halaman Penjelasan Artefak */
         .modal-overlay {
             position: fixed;
@@ -473,27 +449,35 @@
             margin-bottom: 15px;
             border-radius: 6px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         .artifact-detail-item h5 {
             color: var(--primary-green);
             font-size: 1.05rem;
-            margin-bottom: 5px;
         }
 
         .download-link-item {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            margin-top: 10px;
-            color: var(--primary-green);
-            font-weight: 700;
+            gap: 8px;
+            margin-top: 5px;
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 600;
             font-size: 0.85rem;
-            text-decoration: underline;
+            text-decoration: none;
+            width: fit-content;
+            transition: all 0.2s ease;
         }
 
         .download-link-item:hover {
-            color: var(--accent-green);
+            background: var(--accent-green);
+            color: var(--bright-yellow);
         }
 
         footer {
@@ -512,7 +496,6 @@
 </head>
 <body>
 
-    <!-- Header Hero Banner -->
     <header class="hero-banner">
         <div class="top-badge"><i class="fa-solid fa-volleyball"></i> PORTOFOLIO DIGITAL PPG PRAJABATAN 2026</div>
         <h1>GURU PJOK MASA DEPAN</h1>
@@ -524,14 +507,12 @@
 
     <div class="container">
 
-        <!-- Navigasi Menu Grid -->
         <div class="menu-grid">
             <a href="#profil" class="menu-card">Profil Guru <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <a href="#visi-misi" class="menu-card"><i class="fa-solid fa-volleyball"></i> Visi Pendidikan <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             <a href="#refleksi-matkul" class="menu-card">Refleksi Mata Kuliah <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
 
-        <!-- Section 1: Profil -->
         <section id="profil" class="card-box">
             <div class="profile-wrapper">
                 <div class="profile-card">
@@ -556,7 +537,6 @@
             </div>
         </section>
 
-        <!-- Section 2: Visi & Misi Pendidikan -->
         <section id="visi-misi" class="card-box">
             <div class="section-header">
                 <i class="fa-solid fa-bullseye"></i>
@@ -575,15 +555,13 @@
             </div>
         </section>
 
-        <!-- Section 3: Refleksi Mata Kuliah -->
         <section id="refleksi-matkul" class="card-box volleyball-theme-bg">
             <div class="section-header">
                 <i class="fa-solid fa-volleyball"></i>
                 <h2>Refleksi Pengalaman Belajar Mata Kuliah</h2>
             </div>
-            <p style="margin-bottom: 20px; font-size: 0.95rem;">Klik pada mata kuliah di bawah ini untuk melihat refleksi (4C), rincian artefak, serta unduh dokumen terkait:</p>
+            <p style="margin-bottom: 20px; font-size: 0.95rem;">Klik pada mata kuliah di bawah ini untuk melihat refleksi (4C) serta rincian dan unduhan artefak terkait:</p>
 
-            <!-- TAB BUTTONS MATA KULIAH -->
             <div class="course-tabs">
                 <button class="tab-btn active" onclick="openCourse(event, 'mk_ppl2')"><i class="fa-solid fa-whistle"></i> PPL Mandiri / PPL 2</button>
                 <button class="tab-btn" onclick="openCourse(event, 'mk_pmal')"><i class="fa-solid fa-sliders"></i> PMAL PJOK</button>
@@ -591,8 +569,6 @@
                 <button class="tab-btn" onclick="openCourse(event, 'mk_projek')"><i class="fa-solid fa-people-roof"></i> Projek Kepemimpinan</button>
                 <button class="tab-btn" onclick="openCourse(event, 'mk_semprop')"><i class="fa-solid fa-award"></i> Seminar Proposal</button>
                 <button class="tab-btn" onclick="openCourse(event, 'mk_thk')"><i class="fa-solid fa-leaf"></i> Tri Hita Karana (THK)</button>
-                
-                <!-- TAMBAHAN MATA KULIAH LENGKAP -->
                 <button class="tab-btn" onclick="openCourse(event, 'mk_fpp')"><i class="fa-solid fa-book"></i> Filosofi Pendidikan</button>
                 <button class="tab-btn" onclick="openCourse(event, 'mk_gm')"><i class="fa-solid fa-brain"></i> Growth Mindset</button>
                 <button class="tab-btn" onclick="openCourse(event, 'mk_ppd')"><i class="fa-solid fa-users"></i> Pemahaman Peserta Didik</button>
@@ -601,9 +577,6 @@
                 <button class="tab-btn" onclick="openCourse(event, 'mk_ppl1')"><i class="fa-solid fa-chalkboard-user"></i> PPL 1</button>
             </div>
 
-            <!-- ISI PANEL KONTEN RELEVAN -->
-
-            <!-- PPL Mandiri / PPL 2 -->
             <div id="mk_ppl2" class="course-panel active">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-whistle"></i> Praktik Pengalaman Lapangan (PPL) Mandiri / PPL 2</h3>
                 <div class="reflection-grid">
@@ -630,17 +603,19 @@
                     <h4>ARTEFAK PEMBELAJARAN TERPILIH (PPL MANDIRI)</h4>
                     <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Bukti akumulasi kompetensi dan kematangan pedagogis selama seluruh tahapan PPL Mandiri.</p>
                     <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-file-pdf"></i> Modul Ajar Siklus 2-4[cite: 3]</span>
+                        <span class="pill"><i class="fa-solid fa-file-pdf"></i> Modul Ajar Siklus 2-4</span>
                         <span class="pill"><i class="fa-solid fa-video"></i> Video Praktik Mengajar Mandiri</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('PPL Mandiri', 'Perangkat Modul Ajar Lengkap Siklus 2-4', 'Video Rekaman Pelaksanaan Praktik Mengajar Mandiri', 'Lembar Evaluasi Diri & Refleksi Lesson Study bersama DPL & Guru Pamong', '#download-ppl2')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-ppl2" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('PPL Mandiri', [
+                            { title: 'Perangkat Modul Ajar Lengkap Siklus 2-4', file: '#' },
+                            { title: 'Video Rekaman Pelaksanaan Praktik Mengajar Mandiri', file: '#' },
+                            { title: 'Lembar Evaluasi Diri & Refleksi Lesson Study bersama DPL & Guru Pamong', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PMAL PJOK -->
             <div id="mk_pmal" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-sliders"></i> Pembelajaran Mendalam dan Asesmen Lanjut (PMAL) PJOK</h3>
                 <div class="reflection-grid">
@@ -671,13 +646,15 @@
                         <span class="pill"><i class="fa-solid fa-chart-line"></i> Laporan Evaluasi LK 4E</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('PMAL PJOK', 'Modul Ajar / Rancangan Pembelajaran (LK 4D) berbasis DUP, TaRL, CRT', 'Dokumen Laporan Evaluasi dan Refleksi (LK 4E)', 'Dokumentasi UTS & UAS (Video/Foto Praktik & Analisis Kasus)', '#download-pmal')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-pmal" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('PMAL PJOK', [
+                            { title: 'Modul Ajar / Rancangan Pembelajaran (LK 4D) berbasis DUP, TaRL, CRT', file: '#' },
+                            { title: 'Dokumen Laporan Evaluasi dan Refleksi (LK 4E)', file: '#' },
+                            { title: 'Dokumentasi UTS & UAS (Video/Foto Praktik & Analisis Kasus)', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- PSE -->
             <div id="mk_pse" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-heart-pulse"></i> Pembelajaran Sosial Emosional (PSE)</h3>
                 <div class="reflection-grid">
@@ -708,13 +685,15 @@
                         <span class="pill"><i class="fa-solid fa-heart"></i> Modul Mini School Well-Being</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Sosial Emosional', 'Lembar Kerja 3.1 & 3.2 (Penerapan Experiential Learning berbasis PSE)', 'Lembar Kerja 4.1, 4.2, & 4.4 (Refleksi & Analisis School Well-Being)', 'Laporan Proyek & Modul Mini UAS (Intervensi School Well-Being)', '#download-pse')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-pse" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Sosial Emosional', [
+                            { title: 'Lembar Kerja 3.1 & 3.2 (Penerapan Experiential Learning berbasis PSE)', file: '#' },
+                            { title: 'Lembar Kerja 4.1, 4.2, & 4.4 (Refleksi & Analisis School Well-Being)', file: '#' },
+                            { title: 'Laporan Proyek & Modul Mini UAS (Intervensi School Well-Being)', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Projek Kepemimpinan -->
             <div id="mk_projek" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-people-roof"></i> Projek Kepemimpinan</h3>
                 <div class="reflection-grid">
@@ -745,13 +724,15 @@
                         <span class="pill"><i class="fa-solid fa-file-lines"></i> Proposal & Laporan Akhir Projek</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Projek Kepemimpinan', 'Dokumen Graphic Organizer Why-How-What & Mind Map Projek', 'Lembar Kerja Perumusan SMART Goals berbasis SDGs', 'Draf Proposal & Laporan Akhir Projek Kepemimpinan beserta Jurnal Logbook', '#download-projek')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-projek" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Projek Kepemimpinan', [
+                            { title: 'Dokumen Graphic Organizer Why-How-What & Mind Map Projek', file: '#' },
+                            { title: 'Lembar Kerja Perumusan SMART Goals berbasis SDGs', file: '#' },
+                            { title: 'Draf Proposal & Laporan Akhir Projek Kepemimpinan beserta Jurnal Logbook', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Seminar Proposal -->
             <div id="mk_semprop" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-award"></i> Seminar Proposal</h3>
                 <div class="reflection-grid">
@@ -782,13 +763,15 @@
                         <span class="pill"><i class="fa-solid fa-list-check"></i> Portofolio Aktivitas Gerak Inklusif</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Seminar Proposal', 'Perangkat Modul Ajar/RPP dengan Instrumen Asesmen Diagnostik', 'Dokumentasi Lembar Kerja Peserta Didik (LKPD) Adaptif', 'Portofolio Hasil Rancangan Aktivitas Gerak Inklusif & Refleksi', '#download-semprop')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-semprop" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Seminar Proposal', [
+                            { title: 'Perangkat Modul Ajar/RPP dengan Instrumen Asesmen Diagnostik', file: '#' },
+                            { title: 'Dokumentasi Lembar Kerja Peserta Didik (LKPD) Adaptif', file: '#' },
+                            { title: 'Portofolio Hasil Rancangan Aktivitas Gerak Inklusif & Refleksi', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tri Hita Karana -->
             <div id="mk_thk" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-leaf"></i> Tri Hita Karana (THK) dalam PJOK</h3>
                 <div class="reflection-grid">
@@ -819,13 +802,15 @@
                         <span class="pill"><i class="fa-solid fa-map"></i> RPP Tematik THK & Penilaian</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Tri Hita Karana (THK)', 'Dokumen Esai Sintesis Tiga Pilar THK dalam PJOK', 'Laporan Observasi & Pengamatan Praktik Pembelajaran THK di Sekolah PPL', 'Makalah Strategi Penerapan THK dilengkapi RPP Tematik & Instrumen Penilaian', '#download-thk')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="#" id="download-thk" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Tri Hita Karana (THK)', [
+                            { title: 'Dokumen Esai Sintesis Tiga Pilar THK dalam PJOK', file: '#' },
+                            { title: 'Laporan Observasi & Pengamatan Praktik Pembelajaran THK di Sekolah PPL', file: '#' },
+                            { title: 'Makalah Strategi Penerapan THK dilengkapi RPP Tematik & Instrumen Penilaian', file: '#' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: Filosofi Pendidikan Pancasila -->
             <div id="mk_fpp" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-book"></i> Filosofi Pendidikan Pancasila</h3>
                 <div class="reflection-grid">
@@ -856,14 +841,15 @@
                         <span class="pill"><i class="fa-solid fa-file-shield"></i> Analisis Studi Kasus Kode Etik Guru</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Filosofi Pendidikan Pancasila', 'Rancangan Proyek Modul Ajar/RPP Berbasis Nilai', 'Laporan Analisis Studi Kasus Pelanggaran Kode Etik Guru', 'Rubrik Penilaian Otentik & Refleksi Pertimbangan Etis', 'Refleksi_filosofi pendidikan pancasila.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="4.3. Kasus-kasus pelanggaran kode etik guru-Filosofi.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN Laporan Analisis Studi Kasus </a>
-                        <a href="Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN Rancangan RPP Berbasis Nilai</a>
+                        <button class="btn-view-artifact" onclick="openModal('Filosofi Pendidikan Pancasila', [
+                            { title: 'Refleksi Filosofi Pendidikan Pancasila', file: 'Refleksi_filosofi pendidikan pancasila.pdf' },
+                            { title: 'Laporan Analisis Studi Kasus Pelanggaran Kode Etik Guru', file: '4.3. Kasus-kasus pelanggaran kode etik guru-Filosofi.pdf' },
+                            { title: 'Rancangan Proyek Modul Ajar/RPP Berbasis Nilai', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: Growth Mindset -->
             <div id="mk_gm" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-brain"></i> Pola Pikir Bertumbuh (Growth Mindset)</h3>
                 <div class="reflection-grid">
@@ -894,14 +880,15 @@
                         <span class="pill"><i class="fa-solid fa-diagram-project"></i> Desain Pembelajaran Berbasis Proyek (LK 4.3)</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pola Pikir Bertumbuh (Growth Mindset)', 'Tabel Transformasi Respon Guru (LK 4.2)', 'Desain Pembelajaran Berbasis Proyek PJOK (LK 4.3)', 'Jurnal Refleksi & Rencana Tindak Lanjut / RTL (LK 4.E)', 'Refleksi_Grownth Mindset.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="LK. 4.2. “Mengubah Responmu untuk Kelas Bertumbuh”_growth.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN LK 4.2</a>
-                        <a href="LK. 4.3 Project-Based_growth.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN LK 4.3</a>
+                        <button class="btn-view-artifact" onclick="openModal('Pola Pikir Bertumbuh (Growth Mindset)', [
+                            { title: 'Refleksi Growth Mindset', file: 'Refleksi_Grownth Mindset.pdf' },
+                            { title: 'Tabel Transformasi Respon Guru (LK 4.2)', file: 'LK. 4.2. “Mengubah Responmu untuk Kelas Bertumbuh”_growth.pdf' },
+                            { title: 'Desain Pembelajaran Berbasis Proyek PJOK (LK 4.3)', file: 'LK. 4.3 Project-Based_growth.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: Pemahaman Peserta Didik -->
             <div id="mk_ppd" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-users"></i> Pemahaman Peserta Didik dan Pembelajaran</h3>
                 <div class="reflection-grid">
@@ -932,120 +919,128 @@
                         <span class="pill"><i class="fa-solid fa-fish-fins"></i> Analisis Fishbone Studi Kasus Kelas</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pemahaman Peserta Didik dan Pembelajaran', 'Sintesis Analisis Keberagaman & Strategi Pembelajaran (LK 2a & 2b)', 'Analisis Fishbone Studi Kasus & Rencana Tindak Lanjut (LK 3a, 3b, 3e)', 'Instrumen Asesmen Awal & Matriks Profiling Peserta Didik (LK 4a & 4b)', 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
-                        <a href="Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Pemahaman Peserta Didik dan Pembelajaran', [
+                            { title: 'Refleksi Pemahaman Peserta Didik dan Pembelajaran', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
+                            { title: 'Sintesis Analisis Keberagaman & Strategi Pembelajaran (LK 2a & 2b)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
+                            { title: 'Instrumen Asesmen Awal & Matriks Profiling Peserta Didik (LK 4a & 4b)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: Perspektif Sosiokultural -->
             <div id="mk_sosiokultural" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-globe"></i> Perspektif Sosiokultural dalam Pendidikan Indonesia</h3>
                 <div class="reflection-grid">
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-link"></i> 1. Connection</h4>
-                        <p>Penerapan Scaffolding pada ZPD dan Model Ekologi Bronfenbrenner untuk menciptakan kelas PJOK berkeadilan sosial[cite: 5].</p>
+                        <p>Penerapan Scaffolding pada ZPD dan Model Ekologi Bronfenbrenner untuk menciptakan kelas PJOK berkeadilan sosial.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-bolt"></i> 2. Challenge</h4>
-                        <p>Menyadari kesulitan belajar murid berakar dari kompleksitas interaksi ekosistem (keluarga, sekolah, lingkungan sosial, dan ekonomi)[cite: 5].</p>
+                        <p>Menyadari kesulitan belajar murid berakar dari kompleksitas interaksi ekosistem (keluarga, sekolah, lingkungan sosial, dan ekonomi).</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-lightbulb"></i> 3. Concept</h4>
-                        <p>Scaffolding pada ZPD (Vygotsky), 5 lapisan sistem Ekologi Bronfenbrenner, Culturally Responsive Teaching (CRT), dan Kemitraan Multisektoral[cite: 5].</p>
+                        <p>Scaffolding pada ZPD (Vygotsky), 5 lapisan sistem Ekologi Bronfenbrenner, Culturally Responsive Teaching (CRT), dan Kemitraan Multisektoral.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-arrows-rotate"></i> 4. Change</h4>
-                        <p>Menyusun pembelajaran terdiferensiasi kontekstual, mengintegrasikan falsafah THK, serta memperkuat komunikasi mesosistem dengan orang tua[cite: 5].</p>
+                        <p>Menyusun pembelajaran terdiferensiasi kontekstual, mengintegrasikan falsafah THK, serta memperkuat komunikasi mesosistem dengan orang tua.</p>
                     </div>
                 </div>
 
                 <div class="artefact-container">
                     <i class="fa-solid fa-award" style="font-size: 2.2rem; color: var(--primary-yellow); margin-bottom: 8px;"></i>
                     <h4>ARTEFAK PEMBELAJARAN TERPILIH (SOSIOKULTURAL)</h4>
-                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Dokumen penalaran kritis dan analisis isu-isu sosiokultural di lapangan[cite: 5].</p>
+                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Dokumen penalaran kritis dan analisis isu-isu sosiokultural di lapangan.</p>
                     <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-sitemap"></i> Peta Konsep ZPD & Scaffolding[cite: 5]</span>
-                        <span class="pill"><i class="fa-solid fa-layer-group"></i> Analisis Ekologi Bronfenbrenner[cite: 5]</span>
+                        <span class="pill"><i class="fa-solid fa-sitemap"></i> Peta Konsep ZPD & Scaffolding</span>
+                        <span class="pill"><i class="fa-solid fa-layer-group"></i> Analisis Ekologi Bronfenbrenner</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Perspektif Sosiokultural dalam Pendidikan Indonesia', 'Makalah & Peta Konsep Scaffolding pada ZPD (Topik 7)[cite: 5]', 'LKK & Peta Konsep Model Ekologi Bronfenbrenner (Topik 8)[cite: 5]', 'Analisis Isu Penerapan Scaffolding & Kebijakan Pendidikan/PIP (Topik 9 & UAS)[cite: 5]', 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Perspektif Sosiokultural dalam Pendidikan Indonesia', [
+                            { title: 'Refleksi Perspektif Sosiokultural dalam Pendidikan Indonesia', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' },
+                            { title: 'Makalah & Peta Konsep Scaffolding pada ZPD (Topik 7)', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' },
+                            { title: 'LKK & Peta Konsep Model Ekologi Bronfenbrenner (Topik 8)', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: Pembelajaran Mendalam & Asesmen Dasar -->
             <div id="mk_pmad" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-layer-group"></i> Pembelajaran Mendalam dan Asesmen Dasar</h3>
                 <div class="reflection-grid">
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-link"></i> 1. Connection</h4>
-                        <p>Menggunakan kerangka Understanding by Design (UbD) agar aktivitas fisik menjadi media pembentukan karakter dan kemampuan berpikir kritis[cite: 6].</p>
+                        <p>Menggunakan kerangka Understanding by Design (UbD) agar aktivitas fisik menjadi media pembentukan karakter dan kemampuan berpikir kritis.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-bolt"></i> 2. Challenge</h4>
-                        <p>Mengubah pola perancangan dari product-oriented menjadi Backward Design serta mengintegrasikan Assessment for, as, & of learning[cite: 6].</p>
+                        <p>Mengubah pola perancangan dari product-oriented menjadi Backward Design serta mengintegrasikan Assessment for, as, & of learning.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-lightbulb"></i> 3. Concept</h4>
-                        <p>Backward Design UbD, integrasi nilai keharmonisan Tri Hita Karana dalam olahraga, serta siklus refleksi evaluatif Tilik Diri & RTL[cite: 6].</p>
+                        <p>Backward Design UbD, integrasi nilai keharmonisan Tri Hita Karana dalam olahraga, serta siklus refleksi evaluatif Tilik Diri & RTL.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-arrows-rotate"></i> 4. Change</h4>
-                        <p>Merancang modul berbasis masalah (PBL), mengembangkan rubrik asesmen otentik menyeluruh, dan menguatkan pembiasaan karakter[cite: 6].</p>
+                        <p>Merancang modul berbasis masalah (PBL), mengembangkan rubrik asesmen otentik menyeluruh, dan menguatkan pembiasaan karakter.</p>
                     </div>
                 </div>
 
                 <div class="artefact-container">
                     <i class="fa-solid fa-award" style="font-size: 2.2rem; color: var(--primary-yellow); margin-bottom: 8px;"></i>
                     <h4>ARTEFAK PEMBELAJARAN TERPILIH (PEMBELAJARAN MENDALAM & ASESMEN)</h4>
-                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Produk integratif perancangan perangkat pembelajaran berbasis UbD[cite: 6].</p>
+                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Produk integratif perancangan perangkat pembelajaran berbasis UbD.</p>
                     <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-compass"></i> Modul Ajar Berbasis UbD[cite: 6]</span>
-                        <span class="pill"><i class="fa-solid fa-chart-pie"></i> Laporan Evaluasi & Matriks RTL[cite: 6]</span>
+                        <span class="pill"><i class="fa-solid fa-compass"></i> Modul Ajar Berbasis UbD</span>
+                        <span class="pill"><i class="fa-solid fa-chart-pie"></i> Laporan Evaluasi & Matriks RTL</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Mendalam dan Asesmen Dasar', 'Skenario Aktivitas & Perangkat Pembelajaran Berbasis UbD[cite: 6]', 'Instrumen Rubrik Asesmen Otentik (Kognitif, Afektif, Psikomotorik)[cite: 6]', 'Laporan Analisis Refleksi Guru & Matriks RTL (LK 3.E & 4.E)[cite: 6]', 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Mendalam dan Asesmen Dasar', [
+                            { title: 'Refleksi Pembelajaran Mendalam dan Asesmen Dasar', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' },
+                            { title: 'Skenario Aktivitas & Perangkat Pembelajaran Berbasis UbD', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' },
+                            { title: 'Instrumen Rubrik Asesmen Otentik (Kognitif, Afektif, Psikomotorik)', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
 
-            <!-- TAMBAHAN BARU: PPL 1 -->
             <div id="mk_ppl1" class="course-panel">
                 <h3 style="margin-bottom: 15px; color: var(--primary-green);"><i class="fa-solid fa-chalkboard-user"></i> Praktik Pengalaman Lapangan 1 (PPL 1)</h3>
                 <div class="reflection-grid">
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-link"></i> 1. Connection</h4>
-                        <p>Menyediakan penyiapan pedagogik, profesional, dan sosial untuk memfasilitasi ruang belajar jasmani inklusif berbasis Tri Hita Karana[cite: 7].</p>
+                        <p>Menyediakan penyiapan pedagogik, profesional, dan sosial untuk memfasilitasi ruang belajar jasmani inklusif berbasis Tri Hita Karana.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-bolt"></i> 2. Challenge</h4>
-                        <p>Bergeser dari instruksi mekanis homogen menuju asesmen diagnostik & formatif yang peka terhadap keragaman motorik anak[cite: 7].</p>
+                        <p>Bergeser dari instruksi mekanis homogen menuju asesmen diagnostik & formatif yang peka terhadap keragaman motorik anak.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-lightbulb"></i> 3. Concept</h4>
-                        <p>Pemetaan karakteristik murid holistik, perancangan pembelajaran berdiferensiasi, serta pemanfaatan teknologi dan kesadaran lingkungan[cite: 7].</p>
+                        <p>Pemetaan karakteristik murid holistik, perancangan pembelajaran berdiferensiasi, serta pemanfaatan teknologi dan kesadaran lingkungan.</p>
                     </div>
                     <div class="ref-box">
                         <h4><i class="fa-solid fa-arrows-rotate"></i> 4. Change</h4>
-                        <p>Memformulasi modul student-centered, menjamin aksesibilitas fisik, serta merutinkan refleksi harian berbasis data belajar siswa[cite: 7].</p>
+                        <p>Memformulasi modul student-centered, menjamin aksesibilitas fisik, serta merutinkan refleksi harian berbasis data belajar siswa.</p>
                     </div>
                 </div>
 
                 <div class="artefact-container">
                     <i class="fa-solid fa-award" style="font-size: 2.2rem; color: var(--primary-yellow); margin-bottom: 8px;"></i>
                     <h4>ARTEFAK PEMBELAJARAN TERPILIH (PPL 1)</h4>
-                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Rekam jejak perkembangan praktik mengajar terbimbing di sekolah[cite: 7].</p>
+                    <p style="font-size: 0.88rem; max-width: 600px; margin: 0 auto;">Rekam jejak perkembangan praktik mengajar terbimbing di sekolah.</p>
                     <div class="artefact-pills">
-                        <span class="pill"><i class="fa-solid fa-file-signature"></i> Modul Ajar Berdiferensiasi[cite: 7]</span>
-                        <span class="pill"><i class="fa-solid fa-clipboard-check"></i> Instrumen Asesmen Diagnostik[cite: 7]</span>
+                        <span class="pill"><i class="fa-solid fa-file-signature"></i> Modul Ajar Berdiferensiasi</span>
+                        <span class="pill"><i class="fa-solid fa-clipboard-check"></i> Instrumen Asesmen Diagnostik</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Praktik Pengalaman Lapangan 1 (PPL 1)', 'Modul Ajar PJOK Terdiferensiasi[cite: 7]', 'Instrumen Asesmen Awal (Diagnostik) & Rubrik Unjuk Kerja[cite: 7]', 'Laporan Refleksi Jurnal Harian & Video Praktik Pembelajaran Terbimbing[cite: 7]', 'Refleksi_PPL 1.pdf')">LIHAT DETAIL ARTEFAK &gt;&gt;</button>
-                        <a href="Refleksi_PPL 1.pdf" class="btn-download-artifact" download><i class="fa-solid fa-download"></i> UNDUH DOKUMEN ARTEFAK</a>
+                        <button class="btn-view-artifact" onclick="openModal('Praktik Pengalaman Lapangan 1 (PPL 1)', [
+                            { title: 'Refleksi PPL 1', file: 'Refleksi_PPL 1.pdf' },
+                            { title: 'Modul Ajar PJOK Terdiferensiasi', file: 'Refleksi_PPL 1.pdf' },
+                            { title: 'Instrumen Asesmen Awal (Diagnostik) & Rubrik Unjuk Kerja', file: 'Refleksi_PPL 1.pdf' }
+                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -1054,42 +1049,23 @@
 
     </div>
 
-    <!-- Modal Sub-Halaman Artefak Pembelajaran Interaktif -->
     <div class="modal-overlay" id="artifactModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <div class="modal-body">
                 <h3><i class="fa-solid fa-folder-open"></i> Sub-Halaman Penjelasan Artefak: <span id="modalCourseTitle" style="color: var(--primary-green);"></span></h3>
-                <p style="margin-bottom: 20px; font-size: 0.95rem;">Berikut adalah rincian artefak pendukung utama yang mendokumentasikan proses perkembangan kompetensi pedagogis dan profesional[cite: 2, 3, 4, 5, 6, 7]:</p>
+                <p style="margin-bottom: 20px; font-size: 0.95rem;">Berikut adalah rincian artefak pendukung utama beserta akses unduhan dokumen:</p>
                 
-                <div class="artifact-detail-item">
-                    <h5>1. Artefak Utama A</h5>
-                    <p id="artDetail1">-</p>
-                </div>
-
-                <div class="artifact-detail-item">
-                    <h5>2. Artefak Utama B</h5>
-                    <p id="artDetail2">-</p>
-                </div>
-
-                <div class="artifact-detail-item">
-                    <h5>3. Dokumen Evaluasi & Aksi Nyata</h5>
-                    <p id="artDetail3">-</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 25px;">
-                    <a id="modalDownloadBtn" href="#" class="btn-download-artifact" download><i class="fa-solid fa-file-arrow-down"></i> DOWNLOAD DOKUMEN ARTEFAK LENGKAP</a>
-                </div>
+                <div id="modalArtifactList">
+                    </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Portofolio PPG Prajabatan PJOK. Designed for Physical Education & Sports Excellence.</p>
     </footer>
 
-    <!-- JavaScript Script -->
     <script>
         // Switcher Tab Mata Kuliah
         function openCourse(evt, courseId) {
@@ -1106,20 +1082,39 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Fungsi Modal Dinamis & Tautan Unduh
-        function openModal(courseName, art1, art2, art3, downloadPath) {
+        // Fungsi Modal Dinamis & Generator Tombol Unduh untuk Setiap Artefak
+        function openModal(courseName, artifacts) {
             document.getElementById("modalCourseTitle").innerText = courseName;
-            document.getElementById("artDetail1").innerText = art1;
-            document.getElementById("artDetail2").innerText = art2;
-            document.getElementById("artDetail3").innerText = art3;
             
-            var modalDownloadBtn = document.getElementById("modalDownloadBtn");
-            if (downloadPath) {
-                modalDownloadBtn.href = downloadPath;
-                modalDownloadBtn.style.display = "inline-flex";
-            } else {
-                modalDownloadBtn.style.display = "none";
-            }
+            var artifactListContainer = document.getElementById("modalArtifactList");
+            artifactListContainer.innerHTML = "";
+
+            artifacts.forEach(function(art, index) {
+                var itemDiv = document.createElement("div");
+                itemDiv.className = "artifact-detail-item";
+
+                var title = document.createElement("h5");
+                title.innerText = (index + 1) + ". " + art.title;
+                itemDiv.appendChild(title);
+
+                if (art.file && art.file !== "#") {
+                    var downloadBtn = document.createElement("a");
+                    downloadBtn.className = "download-link-item";
+                    downloadBtn.href = art.file;
+                    downloadBtn.download = "";
+                    downloadBtn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Unduh Dokumen Ini';
+                    itemDiv.appendChild(downloadBtn);
+                } else {
+                    var noFileText = document.createElement("p");
+                    noFileText.style.fontSize = "0.85rem";
+                    noFileText.style.color = "#666";
+                    noFileText.style.fontStyle = "italic";
+                    noFileText.innerText = "Dokumen belum diunggah atau berupa tautan internal.";
+                    itemDiv.appendChild(noFileText);
+                }
+
+                artifactListContainer.appendChild(itemDiv);
+            });
 
             document.getElementById("artifactModal").style.display = "flex";
         }
