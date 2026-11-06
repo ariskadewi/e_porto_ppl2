@@ -459,7 +459,7 @@
             font-size: 1.05rem;
         }
 
-        .link-group {
+        .download-btn-group {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
@@ -472,7 +472,7 @@
             gap: 8px;
             background: var(--primary-green);
             color: var(--white);
-            padding: 6px 14px;
+            padding: 7px 16px;
             border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
@@ -486,23 +486,13 @@
             color: var(--bright-yellow);
         }
 
-        .view-link-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary-yellow);
-            color: var(--primary-green);
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-decoration: none;
-            width: fit-content;
-            transition: all 0.2s ease;
+        .gdrive-link-item {
+            background: #1a73e8;
         }
 
-        .view-link-item:hover {
-            background: var(--bright-yellow);
+        .gdrive-link-item:hover {
+            background: #1557b0;
+            color: #ffffff;
         }
 
         footer {
@@ -632,11 +622,7 @@
                         <span class="pill"><i class="fa-solid fa-video"></i> Video Praktik Mengajar Mandiri</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('PPL Mandiri', [
-                            { title: 'Perangkat Modul Ajar Lengkap Siklus 2-4', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' },
-                            { title: 'Video Rekaman Pelaksanaan Praktik Mengajar Mandiri', file: 'Refleksi_PPL 1.pdf' },
-                            { title: 'Lembar Evaluasi Diri & Refleksi Lesson Study bersama DPL & Guru Pamong', file: 'Refleksi_PPL 1.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_ppl2')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -671,11 +657,7 @@
                         <span class="pill"><i class="fa-solid fa-chart-line"></i> Laporan Evaluasi LK 4E</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('PMAL PJOK', [
-                            { title: 'Modul Ajar / Rancangan Pembelajaran (LK 4D) berbasis DUP, TaRL, CRT', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' },
-                            { title: 'Dokumen Laporan Evaluasi dan Refleksi (LK 4E)', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' },
-                            { title: 'Dokumentasi UTS & UAS (Video/Foto Praktik & Analisis Kasus)', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_pmal')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -710,11 +692,7 @@
                         <span class="pill"><i class="fa-solid fa-heart"></i> Modul Mini School Well-Being</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Sosial Emosional', [
-                            { title: 'Lembar Kerja 3.1 & 3.2 (Penerapan Experiential Learning berbasis PSE)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
-                            { title: 'Lembar Kerja 4.1, 4.2, & 4.4 (Refleksi & Analisis School Well-Being)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
-                            { title: 'Laporan Proyek & Modul Mini UAS (Intervensi School Well-Being)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_pse')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -749,11 +727,7 @@
                         <span class="pill"><i class="fa-solid fa-file-lines"></i> Proposal & Laporan Akhir Projek</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Projek Kepemimpinan', [
-                            { title: 'Dokumen Graphic Organizer Why-How-What & Mind Map Projek', file: 'LK. 4.3 Project-Based_growth.pdf' },
-                            { title: 'Lembar Kerja Perumusan SMART Goals berbasis SDGs', file: 'LK. 4.3 Project-Based_growth.pdf' },
-                            { title: 'Draf Proposal & Laporan Akhir Projek Kepemimpinan beserta Jurnal Logbook', file: 'LK. 4.3 Project-Based_growth.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_projek')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -788,11 +762,7 @@
                         <span class="pill"><i class="fa-solid fa-list-check"></i> Portofolio Aktivitas Gerak Inklusif</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Seminar Proposal', [
-                            { title: 'Perangkat Modul Ajar/RPP dengan Instrumen Asesmen Diagnostik', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' },
-                            { title: 'Dokumentasi Lembar Kerja Peserta Didik (LKPD) Adaptif', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
-                            { title: 'Portofolio Hasil Rancangan Aktivitas Gerak Inklusif & Refleksi', file: 'Refleksi_PPL 1.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_semprop')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -827,11 +797,7 @@
                         <span class="pill"><i class="fa-solid fa-map"></i> RPP Tematik THK & Penilaian</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Tri Hita Karana (THK)', [
-                            { title: 'Dokumen Esai Sintesis Tiga Pilar THK dalam PJOK', file: 'Refleksi_filosofi pendidikan pancasila.pdf' },
-                            { title: 'Laporan Observasi & Pengamatan Praktik Pembelajaran THK di Sekolah PPL', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' },
-                            { title: 'Makalah Strategi Penerapan THK dilengkapi RPP Tematik & Instrumen Penilaian', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_thk')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -866,11 +832,7 @@
                         <span class="pill"><i class="fa-solid fa-file-shield"></i> Analisis Studi Kasus Kode Etik Guru</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Filosofi Pendidikan Pancasila', [
-                            { title: 'Refleksi Filosofi Pendidikan Pancasila', file: 'Refleksi_filosofi pendidikan pancasila.pdf' },
-                            { title: 'Laporan Analisis Studi Kasus Pelanggaran Kode Etik Guru', file: '4.3. Kasus-kasus pelanggaran kode etik guru-Filosofi.pdf' },
-                            { title: 'Rancangan Proyek Modul Ajar/RPP Berbasis Nilai', file: 'Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_fpp')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -905,11 +867,7 @@
                         <span class="pill"><i class="fa-solid fa-diagram-project"></i> Desain Pembelajaran Berbasis Proyek (LK 4.3)</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pola Pikir Bertumbuh (Growth Mindset)', [
-                            { title: 'Refleksi Growth Mindset', file: 'Refleksi_Grownth Mindset.pdf' },
-                            { title: 'Tabel Transformasi Respon Guru (LK 4.2)', file: 'LK. 4.2. “Mengubah Responmu untuk Kelas Bertumbuh”_growth.pdf' },
-                            { title: 'Desain Pembelajaran Berbasis Proyek PJOK (LK 4.3)', file: 'LK. 4.3 Project-Based_growth.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_gm')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -944,11 +902,7 @@
                         <span class="pill"><i class="fa-solid fa-fish-fins"></i> Analisis Fishbone Studi Kasus Kelas</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pemahaman Peserta Didik dan Pembelajaran', [
-                            { title: 'Refleksi Pemahaman Peserta Didik dan Pembelajaran', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
-                            { title: 'Sintesis Analisis Keberagaman & Strategi Pembelajaran (LK 2a & 2b)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' },
-                            { title: 'Instrumen Asesmen Awal & Matriks Profiling Peserta Didik (LK 4a & 4b)', file: 'Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_ppd')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -983,11 +937,7 @@
                         <span class="pill"><i class="fa-solid fa-layer-group"></i> Analisis Ekologi Bronfenbrenner</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Perspektif Sosiokultural dalam Pendidikan Indonesia', [
-                            { title: 'Refleksi Perspektif Sosiokultural dalam Pendidikan Indonesia', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' },
-                            { title: 'Makalah & Peta Konsep Scaffolding pada ZPD (Topik 7)', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' },
-                            { title: 'LKK & Peta Konsep Model Ekologi Bronfenbrenner (Topik 8)', file: 'Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_sosiokultural')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -1022,11 +972,7 @@
                         <span class="pill"><i class="fa-solid fa-chart-pie"></i> Laporan Evaluasi & Matriks RTL</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Pembelajaran Mendalam dan Asesmen Dasar', [
-                            { title: 'Refleksi Pembelajaran Mendalam dan Asesmen Dasar', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' },
-                            { title: 'Skenario Aktivitas & Perangkat Pembelajaran Berbasis UbD', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' },
-                            { title: 'Instrumen Rubrik Asesmen Otentik (Kognitif, Afektif, Psikomotorik)', file: 'Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_pmad')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -1061,11 +1007,7 @@
                         <span class="pill"><i class="fa-solid fa-clipboard-check"></i> Instrumen Asesmen Diagnostik</span>
                     </div>
                     <div class="btn-action-group">
-                        <button class="btn-view-artifact" onclick="openModal('Praktik Pengalaman Lapangan 1 (PPL 1)', [
-                            { title: 'Refleksi PPL 1', file: 'Refleksi_PPL 1.pdf' },
-                            { title: 'Modul Ajar PJOK Terdiferensiasi', file: 'Refleksi_PPL 1.pdf' },
-                            { title: 'Instrumen Asesmen Awal (Diagnostik) & Rubrik Unjuk Kerja', file: 'Refleksi_PPL 1.pdf' }
-                        ])">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
+                        <button class="btn-view-artifact" onclick="showModal('mk_ppl1')">LIHAT DETAIL & UNDUH ARTEFAK &gt;&gt;</button>
                     </div>
                 </div>
             </div>
@@ -1079,7 +1021,7 @@
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <div class="modal-body">
                 <h3><i class="fa-solid fa-folder-open"></i> Sub-Halaman Penjelasan Artefak: <span id="modalCourseTitle" style="color: var(--primary-green);"></span></h3>
-                <p style="margin-bottom: 20px; font-size: 0.95rem;">Berikut adalah rincian artefak pendukung utama beserta akses unduhan dokumen:</p>
+                <p style="margin-bottom: 20px; font-size: 0.95rem;">Berikut adalah rincian artefak pendukung utama beserta akses langsung ke Google Drive:</p>
                 
                 <div id="modalArtifactList">
                 </div>
@@ -1092,6 +1034,110 @@
     </footer>
 
     <script>
+        // =========================================================================
+        // PANOL EDIT LINK GOOGLE DRIVE DI SINI (MUDAH UNTUK ORANG AWAM KODING)
+        // Cukup ganti teks di dalam tanda petik "https://drive.google.com/..."
+        // Jika belum ada link, biarkan string kosong "" atau isi "#".
+        // =========================================================================
+        const DATA_ARTEFAK = {
+            "mk_ppl2": {
+                title: "Praktik Pengalaman Lapangan (PPL) Mandiri / PPL 2",
+                items: [
+                    { title: "Perangkat Modul Ajar Lengkap Siklus 2-4", gdrive: "https://drive.google.com/your-file-link-1", localFile: "Modul_PPL2.pdf" },
+                    { title: "Video Rekaman Pelaksanaan Praktik Mengajar Mandiri", gdrive: "https://drive.google.com/your-file-link-2", localFile: "" },
+                    { title: "Lembar Evaluasi Diri & Refleksi Lesson Study bersama DPL & Guru Pamong", gdrive: "https://drive.google.com/your-file-link-3", localFile: "" }
+                ]
+            },
+            "mk_pmal": {
+                title: "Pembelajaran Mendalam dan Asesmen Lanjut (PMAL) PJOK",
+                items: [
+                    { title: "Modul Ajar / Rancangan Pembelajaran (LK 4D) berbasis DUP, TaRL, CRT", gdrive: "https://drive.google.com/file/d/EXAMPLE_LINK_1/view?usp=sharing", localFile: "" },
+                    { title: "Dokumen Laporan Evaluasi dan Refleksi (LK 4E)", gdrive: "", localFile: "" },
+                    { title: "Dokumentasi UTS & UAS (Video/Foto Praktik & Analisis Kasus)", gdrive: "", localFile: "" }
+                ]
+            },
+            "mk_pse": {
+                title: "Pembelajaran Sosial Emosional (PSE)",
+                items: [
+                    { title: "Lembar Kerja 3.1 & 3.2 (Penerapan Experiential Learning berbasis PSE)", gdrive: "", localFile: "" },
+                    { title: "Lembar Kerja 4.1, 4.2, & 4.4 (Refleksi & Analisis School Well-Being)", gdrive: "", localFile: "" },
+                    { title: "Laporan Proyek & Modul Mini UAS (Intervensi School Well-Being)", gdrive: "", localFile: "" }
+                ]
+            },
+            "mk_projek": {
+                title: "Projek Kepemimpinan",
+                items: [
+                    { title: "Dokumen Graphic Organizer Why-How-What & Mind Map Projek", gdrive: "", localFile: "" },
+                    { title: "Lembar Kerja Perumusan SMART Goals berbasis SDGs", gdrive: "", localFile: "" },
+                    { title: "Draf Proposal & Laporan Akhir Projek Kepemimpinan beserta Jurnal Logbook", gdrive: "", localFile: "" }
+                ]
+            },
+            "mk_semprop": {
+                title: "Seminar Proposal",
+                items: [
+                    { title: "Perangkat Modul Ajar/RPP dengan Instrumen Asesmen Diagnostik", gdrive: "", localFile: "" },
+                    { title: "Dokumentasi Lembar Kerja Peserta Didik (LKPD) Adaptif", gdrive: "", localFile: "" },
+                    { title: "Portofolio Hasil Rancangan Aktivitas Gerak Inklusif & Refleksi", gdrive: "", localFile: "" }
+                ]
+            },
+            "mk_thk": {
+                title: "Tri Hita Karana (THK) dalam PJOK",
+                items: [
+                    { title: "Dokumen Esai Sintesis Tiga Pilar THK dalam PJOK", gdrive: "", localFile: "" },
+                    { title: "Laporan Observasi & Pengamatan Praktik Pembelajaran THK di Sekolah PPL", gdrive: "", localFile: "" },
+                    { title: "Makalah Strategi Penerapan THK dilengkapi RPP Tematik & Instrumen Penilaian", gdrive: "", localFile: "" }
+                ]
+            },
+            "mk_fpp": {
+                title: "Filosofi Pendidikan Pancasila",
+                items: [
+                    { title: "Refleksi Filosofi Pendidikan Pancasila", gdrive: "https://drive.google.com/file/d/EXAMPLE_LINK_FPP1/view?usp=sharing", localFile: "Refleksi_filosofi pendidikan pancasila.pdf" },
+                    { title: "Laporan Analisis Studi Kasus Pelanggaran Kode Etik Guru", gdrive: "https://drive.google.com/file/d/EXAMPLE_LINK_FPP2/view?usp=sharing", localFile: "4.3. Kasus-kasus pelanggaran kode etik guru-Filosofi.pdf" },
+                    { title: "Rancangan Proyek Modul Ajar/RPP Berbasis Nilai", gdrive: "https://drive.google.com/file/d/EXAMPLE_LINK_FPP3/view?usp=sharing", localFile: "Modul Ajar Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) - Penerapan Keterampilan Gerak Senam Lantai - Fase D - 9lJ16kemaV.pdf" }
+                ]
+            },
+            "mk_gm": {
+                title: "Pola Pikir Bertumbuh (Growth Mindset)",
+                items: [
+                    { title: "Refleksi Growth Mindset", gdrive: "", localFile: "Refleksi_Grownth Mindset.pdf" },
+                    { title: "Tabel Transformasi Respon Guru (LK 4.2)", gdrive: "", localFile: "LK. 4.2. “Mengubah Responmu untuk Kelas Bertumbuh”_growth.pdf" },
+                    { title: "Desain Pembelajaran Berbasis Proyek PJOK (LK 4.3)", gdrive: "", localFile: "LK. 4.3 Project-Based_growth.pdf" }
+                ]
+            },
+            "mk_ppd": {
+                title: "Pemahaman Peserta Didik dan Pembelajaran",
+                items: [
+                    { title: "Refleksi Pemahaman Peserta Didik dan Pembelajaran", gdrive: "", localFile: "Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf" },
+                    { title: "Sintesis Analisis Keberagaman & Strategi Pembelajaran (LK 2a & 2b)", gdrive: "", localFile: "Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf" },
+                    { title: "Instrumen Asesmen Awal & Matriks Profiling Peserta Didik (LK 4a & 4b)", gdrive: "", localFile: "Refleksi_Pemahaman Peserta Didik dan Pembelajaran.pdf" }
+                ]
+            },
+            "mk_sosiokultural": {
+                title: "Perspektif Sosiokultural dalam Pendidikan Indonesia",
+                items: [
+                    { title: "Refleksi Perspektif Sosiokultural dalam Pendidikan Indonesia", gdrive: "", localFile: "Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf" },
+                    { title: "Makalah & Peta Konsep Scaffolding pada ZPD (Topik 7)", gdrive: "", localFile: "Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf" },
+                    { title: "LKK & Peta Konsep Model Ekologi Bronfenbrenner (Topik 8)", gdrive: "", localFile: "Refleksi_Perspektif sosiokultural dalam pendidikan indonesia.pdf" }
+                ]
+            },
+            "mk_pmad": {
+                title: "Pembelajaran Mendalam dan Asesmen Dasar",
+                items: [
+                    { title: "Refleksi Pembelajaran Mendalam dan Asesmen Dasar", gdrive: "", localFile: "Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf" },
+                    { title: "Skenario Aktivitas & Perangkat Pembelajaran Berbasis UbD", gdrive: "", localFile: "Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf" },
+                    { title: "Instrumen Rubrik Asesmen Otentik (Kognitif, Afektif, Psikomotorik)", gdrive: "", localFile: "Refleksi_Pembelajaran mendalam dan asesmen dasar.pdf" }
+                ]
+            },
+            "mk_ppl1": {
+                title: "Praktik Pengalaman Lapangan 1 (PPL 1)",
+                items: [
+                    { title: "Refleksi PPL 1", gdrive: "", localFile: "Refleksi_PPL 1.pdf" },
+                    { title: "Modul Ajar PJOK Terdiferensiasi", gdrive: "", localFile: "Refleksi_PPL 1.pdf" },
+                    { title: "Instrumen Asesmen Awal (Diagnostik) & Rubrik Unjuk Kerja", gdrive: "", localFile: "Refleksi_PPL 1.pdf" }
+                ]
+            }
+        };
+
         // Switcher Tab Mata Kuliah
         function openCourse(evt, courseId) {
             var i, coursePanel, tabBtn;
@@ -1107,46 +1153,60 @@
             evt.currentTarget.classList.add("active");
         }
 
-        // Fungsi Modal Dinamis & Generator Tombol Unduh untuk Setiap Artefak
-        function openModal(courseName, artifacts) {
-            document.getElementById("modalCourseTitle").innerText = courseName;
+        // Fungsi Menampilkan Modal Penjelasan Artefak & Link Google Drive
+        function showModal(courseKey) {
+            const courseData = DATA_ARTEFAK[courseKey];
+            if (!courseData) return;
+
+            document.getElementById("modalCourseTitle").innerText = courseData.title;
             
-            var artifactListContainer = document.getElementById("modalArtifactList");
+            const artifactListContainer = document.getElementById("modalArtifactList");
             artifactListContainer.innerHTML = "";
 
-            artifacts.forEach(function(art, index) {
-                var itemDiv = document.createElement("div");
+            courseData.items.forEach(function(art, index) {
+                const itemDiv = document.createElement("div");
                 itemDiv.className = "artifact-detail-item";
 
-                var title = document.createElement("h5");
+                const title = document.createElement("h5");
                 title.innerText = (index + 1) + ". " + art.title;
                 itemDiv.appendChild(title);
 
-                if (art.file && art.file !== "#") {
-                    var linkGroup = document.createElement("div");
-                    linkGroup.className = "link-group";
+                const btnGroup = document.createElement("div");
+                btnGroup.className = "download-btn-group";
 
-                    var viewBtn = document.createElement("a");
-                    viewBtn.className = "view-link-item";
-                    viewBtn.href = art.file;
-                    viewBtn.target = "_blank";
-                    viewBtn.innerHTML = '<i class="fa-solid fa-eye"></i> Lihat Dokumen';
+                let hasLink = false;
 
-                    var downloadBtn = document.createElement("a");
-                    downloadBtn.className = "download-link-item";
-                    downloadBtn.href = art.file;
-                    downloadBtn.download = "";
-                    downloadBtn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Unduh Dokumen';
+                // Tombol Google Drive
+                if (art.gdrive && art.gdrive.trim() !== "" && art.gdrive !== "#") {
+                    hasLink = true;
+                    const driveBtn = document.createElement("a");
+                    driveBtn.className = "download-link-item gdrive-link-item";
+                    driveBtn.href = art.gdrive;
+                    driveBtn.target = "_blank";
+                    driveBtn.innerHTML = '<i class="fa-brands fa-google-drive"></i> Buka / Unduh di Google Drive';
+                    btnGroup.appendChild(driveBtn);
+                }
 
-                    linkGroup.appendChild(viewBtn);
-                    linkGroup.appendChild(downloadBtn);
-                    itemDiv.appendChild(linkGroup);
+                // Tombol Unduh File Lokal (jika ada)
+                if (art.localFile && art.localFile.trim() !== "" && art.localFile !== "#") {
+                    hasLink = true;
+                    const localBtn = document.createElement("a");
+                    localBtn.className = "download-link-item";
+                    localBtn.href = art.localFile;
+                    localBtn.target = "_blank";
+                    localBtn.download = "";
+                    localBtn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Unduh PDF';
+                    btnGroup.appendChild(localBtn);
+                }
+
+                if (hasLink) {
+                    itemDiv.appendChild(btnGroup);
                 } else {
-                    var noFileText = document.createElement("p");
+                    const noFileText = document.createElement("p");
                     noFileText.style.fontSize = "0.85rem";
                     noFileText.style.color = "#666";
                     noFileText.style.fontStyle = "italic";
-                    noFileText.innerText = "Dokumen belum diunggah atau berupa tautan internal.";
+                    noFileText.innerText = "Tautan Google Drive belum dimasukkan.";
                     itemDiv.appendChild(noFileText);
                 }
 
